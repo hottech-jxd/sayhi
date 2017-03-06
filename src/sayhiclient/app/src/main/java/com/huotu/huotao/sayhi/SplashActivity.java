@@ -57,8 +57,10 @@ public class SplashActivity extends AppCompatActivity {
             boolean isFinished = SayHiCache.judgeCurrentConfigIsFinished( currentConfig );
             if(!isFinished){//还没有完成则，启动微信
                 if(  needUpdateCurrentConfig( currentConfig , newConfig )){//如果任务相同，则判断 最大人数，频率，打招呼内容是否有更新，有则修改以后保存配置
+                    LogUtils.log("当前任务配置有更新");
                     saveNewConfig(currentConfig);
                 }else {
+                    LogUtils.log("当前任务只启动微信");
                     startWechatApp();
                 }
                 return;

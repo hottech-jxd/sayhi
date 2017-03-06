@@ -159,6 +159,16 @@ public class SayHiGetDataService extends IGetDataAidlInterface.Stub {
 
                     }
                 });
+
+        XposedBridge.hookAllMethods(activityManagerServiceClzz, "systemReady", new XC_MethodHook() {
+            @Override
+            protected void afterHookedMethod(MethodHookParam param) throws Throwable {
+                super.afterHookedMethod(param);
+
+                sayHiGetDataService.systemReady();
+            }
+        });
+
     }
 
     private static void register_two(){
