@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/a.regexp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/assets/ShareSDK.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/assets/color.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/res/xml/merchant_info.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/src/com/huotu/mall/guibaobao/wxapi/WXEntryActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/guibaobao/src/com/huotu/mall/guibaobao/wxapi/WXPayEntryActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/morefan/res/xml/merchant_info.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/custom/morefan/src/com/huotu/mall/config/UrlConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/BaseApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/ui/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build/generated/source/buildConfig/huotao/debug/com/huotu/huotao/sayhi/BuildConfig.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/androidTest/java/com/jxd/mocklocation/ExampleInstrumentedTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/ApiDefine.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/BaseBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/Constants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/DeviceBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/FileUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/GPSHooker.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/GetDataThread.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/LocationBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/LocationUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/LogUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/NearPersonData.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiBroadcastReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiCache.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiGetDataService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiResultBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayHiToNearPersonService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SayhiApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SettingsHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SignUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/TaskBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/TaskResultBeam.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/WechatUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/ZRetrofitUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/LocationBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/NearPersonBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/SayHiBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/SayHiResultBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/TaskBean.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/bean/TaskResultBeam.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/custom/haoyungou/res/layout/announced_detail.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/custom/haoyungou/res/layout/bottom_other.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/custom/haoyungou/res/layout/countdown_detail.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/custom/haoyungou/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/adapter/ListAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/conf/Contant.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/model/JModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/model/JumpShoppingModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/model/ProductModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/receiver/MyBroadcastReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/receiver/MyPushReceiver.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/base/HomeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/base/PushHandlerActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/base/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/login/LoginActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/product/ProductDetailActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/ui/raiders/WinLogDetailActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/uitls/ActivityUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/uitls/BitmapLoader.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/uitls/CartUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/uitls/SystemTools.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/java/com/huotu/fanmore/pinkcatraiders/widget/TipAlertDialog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/res/layout/popshoppingview.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/res/layout/tipalertdialog.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

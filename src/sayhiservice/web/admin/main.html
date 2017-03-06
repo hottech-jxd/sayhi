@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>友邦-活动管理平台</title>
+    <meta charset="UTF-8" content="text/html">
+    <link href="/assets/css/main.css" type="text/css" rel="stylesheet" />
+    <script src="/assets/seajs/sea.js"></script>
+    <script src="/assets/seajs/config.js"></script>
+</head>
+<body>
+    <div class="leftpanel">
+        <div class="logopanel" style="height: 65px; font-size: 20px; color: #fff; text-align: center; padding-top: 40px;">
+            友邦-活动管理平台
+        </div>
+        <!--账号信息BEGIN-->
+        <div class="leftpanelinner" style="border-bottom: 1px dotted #444;">
+            <ul class="nav nav-pills nav-stacked nav-bracket" style="margin-bottom: 0px;">
+                <li style="clear: both; height: 5px"></li>
+                <li>
+                    <p style="margin-left: 15px">
+                        <span style="width: 160px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: inline-block;">
+                            <a href="javascript:" style="color: #8f939e"></a>
+                        </span>
+
+                        <span style="width: 160px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; display: inline-block;">
+                            <a href="javascript:" style="color: #8f939e">超级管理员</a>
+                        </span>
+                        <br>
+                        <span>
+                            <a href="javascript:logout();" style="color: #8f939e;">退出</a>
+                        </span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!--账号信息END-->
+        <!--菜单BEGIN-->
+        <div id="con_left" style="height: 546px;">
+            <div class="leftpanelinner" id="menuContainer" style="height: 100%; overflow-y: auto;">
+                <ul class="nav nav-pills nav-stacked nav-bracket" id="menuList">
+                    <li class="nav-parent nav-active active js-cms-menus" style="cursor: pointer;">
+                        <a class="aparent"><i class="fa fa-chevron-circle-right"></i><span>51特权券</span></a>
+                        <ul class="children">
+                            <li class="childMenus active" id="id_01" style="cursor: pointer;" onclick="openUrl('view/modelList.html','01')">
+                                <div style="display: none; position: absolute; left: 10px; padding: 10px; top: 43px; color: #fff; z-index: 9999; background: #04B299; width: 180px; height: auto; border-radius: 4px 4px 4px 4px;"></div>
+                                <a><i class="fa fa-caret-right"></i>优惠券列表<span class="fa pull-right badge badge-success" style="display: none; background-color: red;">!
+                                </span>
+                                </a>
+                            </li>
+                            <li class="childMenus" id="id_02" style="cursor: pointer;" onclick="openUrl('view/helpList.html','02')">
+                                <div style="display: none; position: absolute; left: 10px; padding: 10px; top: 43px; color: #fff; z-index: 9999; background: #04B299; width: 180px; height: auto; border-radius: 4px 4px 4px 4px;"></div>
+                                <a><i class="fa fa-caret-right"></i>参与助力列表<span class="fa pull-right badge badge-success" style="display: none; background-color: red;">!
+                                </span>
+                                </a>
+                            </li>
+                            <li class="childMenus" id="id_03" style="cursor: pointer;" onclick="openUrl('view/shopList.html','03')">
+                                <div style="display: none; position: absolute; left: 10px; padding: 10px; top: 43px; color: #fff; z-index: 9999; background: #04B299; width: 180px; height: auto; border-radius: 4px 4px 4px 4px;"></div>
+                                <a><i class="fa fa-caret-right"></i>门店核销<span class="fa pull-right badge badge-success" style="display: none; background-color: red;">!
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent nav-active active js-cms-menus" style="cursor: pointer;">
+                        <a class="aparent"><i class="fa fa-chevron-circle-right"></i><span>预约0元设计</span></a>
+                        <ul class="children">
+                            <li class="childMenus" id="id_04" style="cursor: pointer;" onclick="openUrl('view/signUpList.html','04')">
+                                <div style="display: none; position: absolute; left: 10px; padding: 10px; top: 43px; color: #fff; z-index: 9999; background: #04B299; width: 180px; height: auto; border-radius: 4px 4px 4px 4px;"></div>
+                                <a><i class="fa fa-caret-right"></i>报名用户<span class="fa pull-right badge badge-success" style="display: none; background-color: red;">!
+                                </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--菜单END-->
+    </div>
+    <div class="mainpanel" id="mainpanel">
+        <div class="headerbar">
+            <div class="header-left" style="padding-left: 5px;">
+                <div class="topnav">
+                    <ul class="nav nav-horizontal">
+                        <li class="" id="menuDesktop">
+                            <a href="/main.html" id="aDesktop"><i class="fa  fa-home"></i>
+                                <span>桌面</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="con_right" id="con_right">
+            <iframe id="content" name="content" height="100%" class="hide" marginwidth="0" marginheight="0" frameborder="0" scrolling="auto" src="view/modelList.html" style="display: inline;"></iframe>
+        </div>
+    </div>
+    <script>seajs.use(["main"]);</script>
+</body>
+</html>
+<script>
+    function logout() {
+        $.ajax({
+            url: "/AjaxHandler.aspx",
+            data: { action: "logout" },
+            type: "post",
+            dataType: "json",
+            success: function (ret) {
+                window.location.href = "/login.html";
+            },
+            error: function (err) {
+
+            }
+        });
+    }
+</script>

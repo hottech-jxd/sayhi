@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>历史任务</title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/libs/JGrid/theme/Jackson_skin_gray.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js" type="text/javascript"></script>
+    <script src="../assets/seajs/config.js" type="text/javascript"></script>
+    <!--<script src="../assets/libs/jquery.area.js" type="text/javascript"></script>-->
+</head>
+<body>
+<div class="search block">
+    
+    <div class="h">
+        <span class="icon-sprite icon-magnifier"></span>
+        <h3>快速搜索</h3>
+    </div>
+    
+       
+    <div class="cnt-wp">
+        <div class="cnt">
+            <div class="search-bar">
+                <label class="first ">开始时间：</label>
+                <input name="starttime" type="text" id="starttime" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" class="input-small" style="width: 150px;" placeholder="任务开始时间">
+                <label class="first">设备号</label>
+                <input name="deviceno" type="text" id="deviceno" class="input-small" style="width: 150px;" placeholder="设备号" />
+
+                <label class="first ">状态：</label>
+                <select id="status" name="status">
+                    <option value="">全部</option>
+                    <option value="0">未开始</option>
+                    <option value="1">运行中</option>
+                    <option value="8">已完成</option>                    
+                </select>
+             
+                <label><a class="btn-lit btn-middle " id="jq-cms-search" href="javascript:" style="margin-bottom: 3px;"><span>搜索</span></a></label>
+                <label><a class="btn-lit btn-middle " id="jq-cms-newtask" href="addtask.html" style="margin-bottom: 3px;"><span>新增任务</span></a></label>
+              
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>
+<div class="block">
+    <div class="h">
+        <span class="icon-sprite icon-list"></span>
+        <h3 style="float: left; width: 144px;">历史任务</h3>
+        <div class="bar">
+        </div>
+    </div>
+    <div class="cnt-wp" id="js-ModelList"></div>
+</div>
+<script>seajs.use(["JGrid","datetime","tasklist"]);</script>
+</body>
+</html>

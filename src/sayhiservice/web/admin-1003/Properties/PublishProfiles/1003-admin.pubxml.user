@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\myjob\huotao\src\sayhiservice\publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AjaxHandler.aspx">
+      <publishTime>05/03/2016 18:13:56</publishTime>
+    </File>
+    <File Include="assets/css/admin.content.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/admin.global.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/admin.login.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/bootstrap.min.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/font-awesome.min.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/global.css">
+      <publishTime>05/03/2016 18:32:31</publishTime>
+    </File>
+    <File Include="assets/css/main.css">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.eot">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.svg">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>05/03/2016 18:32:37</publishTime>
+    </File>
+    <File Include="assets/fonts/fontawesome-webfont.woff">
+      <publishTime>05/03/2016 18:32:37</publishTime>
+    </File>
+    <File Include="assets/img/adm_menu1.png">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/img/adm_menu2.png">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/img/adm_menu3.png">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/img/adm_menu4.png">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/img/bglogo.png">
+      <publishTime>05/03/2016 18:32:36</publishTime>
+    </File>
+    <File Include="assets/img/block-corner.png">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/block-h.gif">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/box-title.gif">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/bullet_key.png">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/button-green-lit.png">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/button-green.png">
+      <publishTime>05/03/2016 18:32:40</publishTime>
+    </File>
+    <File Include="assets/img/ge.gif">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/icons.png">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/lock.gif">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/login.gif">
+      <publishTime>05/03/2016 18:32:39</publishTime>
+    </File>
+    <File Include="assets/img/login_logo.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/logo.gif">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/minus.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/plus-white.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/plus.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/qq.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/ss.gif">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/ss2_03.gif">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/tool1.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/tool2.png">
+      <publishTime>05/03/2016 18:32:42</publishTime>
+    </File>
+    <File Include="assets/img/tool3.png">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/img/use.gif">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/js/common.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/js/html5shiv.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/js/jquery-1.9.1.min.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/js/page/common.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/js/page/home.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/js/page/login.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/js/page/main.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/js/page/sayhi/deviceList.js">
+      <publishTime>02/25/2017 13:31:19</publishTime>
+    </File>
+    <File Include="assets/js/page/system/signUpList.js">
+      <publishTime>02/25/2017 14:04:10</publishTime>
+    </File>
+    <File Include="assets/js/respond.min.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/--small-load.gif">
+      <publishTime>05/03/2016 18:42:29</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/asc.gif">
+      <publishTime>05/03/2016 18:42:39</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/button-white.gif">
+      <publishTime>05/03/2016 18:42:37</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/data-table-th.gif">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/desc.gif">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/load.gif">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/small-load.gif">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/img/th.gif">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/jquery.JGrid.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin.css">
+      <publishTime>05/03/2016 18:42:33</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin_blue.css">
+      <publishTime>05/03/2016 18:42:33</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin_blue_noline.css">
+      <publishTime>05/03/2016 18:42:31</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin_brank.css">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin_gray.css">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/JGrid/theme/Jackson_skin_noline.css">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/jquery.area.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/libs/layer/extend/layer.ext.js">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/layer/layer.js">
+      <publishTime>05/03/2016 18:37:55</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/default/icon-ext.png">
+      <publishTime>05/03/2016 16:57:19</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/default/icon.png">
+      <publishTime>05/03/2016 16:57:19</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/default/loading-0.gif">
+      <publishTime>05/03/2016 16:57:19</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/default/loading-1.gif">
+      <publishTime>05/03/2016 16:57:23</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/default/loading-2.gif">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/layer.css">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/layer/skin/layer.ext.css">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/calendar.js">
+      <publishTime>05/03/2016 18:37:55</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/lang/en.js">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/lang/zh-cn.js">
+      <publishTime>05/03/2016 18:42:33</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/lang/zh-tw.js">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/datePicker.gif">
+      <publishTime>05/03/2016 18:42:32</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/default/datepicker.css">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/default/img.gif">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/WdatePicker.css">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/whyGreen/bg.jpg">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/whyGreen/datepicker.css">
+      <publishTime>05/03/2016 16:57:25</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/skin/whyGreen/img.gif">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/WdatePicker.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/lang/en.js">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/lang/zh-cn.js">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/lang/zh-tw.js">
+      <publishTime>05/03/2016 16:57:22</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/readme.txt">
+      <publishTime>05/03/2016 18:42:36</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/datePicker.gif">
+      <publishTime>05/03/2016 16:57:25</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/default/datepicker.css">
+      <publishTime>05/03/2016 17:07:41</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/default/img.gif">
+      <publishTime>05/03/2016 17:07:42</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/WdatePicker.css">
+      <publishTime>05/03/2016 16:57:25</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/whyGreen/bg.jpg">
+      <publishTime>05/03/2016 17:07:41</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/whyGreen/datepicker.css">
+      <publishTime>05/03/2016 17:07:41</publishTime>
+    </File>
+    <File Include="assets/libs/My97DatePicker/开发包/skin/whyGreen/img.gif">
+      <publishTime>05/03/2016 17:07:41</publishTime>
+    </File>
+    <File Include="assets/libs/validate/jquery.validate.addMethod.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/libs/validate/jquery.validate.js">
+      <publishTime>05/03/2016 18:37:56</publishTime>
+    </File>
+    <File Include="assets/libs/validate/jquery.validate.min.js">
+      <publishTime>05/03/2016 18:37:55</publishTime>
+    </File>
+    <File Include="assets/seajs/config.js">
+      <publishTime>02/25/2017 14:09:00</publishTime>
+    </File>
+    <File Include="assets/seajs/sea.js">
+      <publishTime>05/03/2016 18:32:44</publishTime>
+    </File>
+    <File Include="assets/说明.txt">
+      <publishTime>05/03/2016 18:22:53</publishTime>
+    </File>
+    <File Include="bin/admin-1003.dll">
+      <publishTime>02/25/2017 16:14:35</publishTime>
+    </File>
+    <File Include="bin/common.dll">
+      <publishTime>02/25/2017 16:14:34</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>07/03/2014 10:56:49</publishTime>
+    </File>
+    <File Include="bin/logic.dll">
+      <publishTime>02/25/2017 16:14:35</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/03/2016 18:14:06</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>08/01/2015 05:16:18</publishTime>
+    </File>
+    <File Include="bin/NPOI.OOXML.dll">
+      <publishTime>08/01/2015 05:16:22</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXml4Net.dll">
+      <publishTime>08/01/2015 05:16:19</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXmlFormats.dll">
+      <publishTime>08/01/2015 05:16:21</publishTime>
+    </File>
+    <File Include="dorpt.aspx">
+      <publishTime>05/20/2016 10:42:17</publishTime>
+    </File>
+    <File Include="login.html">
+      <publishTime>05/03/2016 18:13:56</publishTime>
+    </File>
+    <File Include="main.html">
+      <publishTime>02/25/2017 13:48:01</publishTime>
+    </File>
+    <File Include="view/addtask.html">
+      <publishTime>02/25/2017 14:06:32</publishTime>
+    </File>
+    <File Include="view/signUpList.html">
+      <publishTime>02/25/2017 14:03:38</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/25/2017 16:14:36</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/libs/JGrid/theme/Jackson_skin_gray.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js" type="text/javascript"></script>
+    <script src="../assets/seajs/config.js" type="text/javascript"></script>
+    <!--<script src="../assets/libs/jquery.area.js" type="text/javascript"></script>-->
+</head>
+<body>
+<div class="search block">
+    <div class="h">
+        <span class="icon-sprite icon-magnifier"></span>
+        <h3>快速搜索</h3>
+    </div>
+    <div class="cnt-wp">
+        <div class="cnt">
+            <div class="search-bar">
+                <label class="first ">搜索关键字：</label>
+                <input name="modelName" type="text" id="modelName" class="input-small" style="width: 200px;" placeholder=" 搜索关键字">
+                <label class="first ">省份：</label>
+                <select id="s_province" name="s_province">
+                </select>
+                <label class="first ">城市：</label>
+                <select id="s_city" name="s_city">
+                </select>
+                <label class="first ">县区：</label>
+                <select id="s_county" name="s_county">
+                </select>
+                <label><a class="btn-lit btn-middle " id="jq-cms-search" href="javascript:" style="margin-bottom: 3px;"><span>搜索</span></a></label>
+                <label><a class="btn-lit btn-middle " id="jq-cms-searchAll" href="javascript:" style="margin-bottom: 3px;"><span>显示所有</span></a></label>
+                <label><a class="btn-lit btn-middle " id="A1" href="../dorpt.aspx" target="_blank" style="margin-bottom: 3px;"><span>导出</span></a></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div class="h">
+        <span class="icon-sprite icon-list"></span>
+        <h3 style="float: left; width: 144px;">申请列表</h3>
+        <div class="bar">
+        </div>
+    </div>
+    <div class="cnt-wp" id="js-ModelList"></div>
+</div>
+<!--<script>seajs.use(["JGrid","area","signUpList"]);</script>-->
+</body>
+</html>

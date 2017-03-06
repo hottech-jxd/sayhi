@@ -1,0 +1,15 @@
+此目录结构说明:
+
+css 文件夹为相关css目录
+
+fonts 文件夹为字体图标相关目录
+
+img  文件夹为使用到的图片目录
+
+js  文件夹为相关js目录，里面按照模块划分为文件夹，一个模块存放一个模块下面的js
+
+libs 文件夹为第三方js库目录  
+	目前里面包含jquery.validate 验证插件和layer 弹框插件,
+	以后统一使用layer弹框插件(http://layer.layui.com/)
+	列表插件可以使用JGrid 插件
+seajs 为阿里巴巴前端大牛玉伯的作品，使用seajs来实现加载模块化js加载，

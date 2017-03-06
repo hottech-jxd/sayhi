@@ -1,0 +1,119 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>编辑任务</title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/libs/JGrid/theme/Jackson_skin_gray.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js" type="text/javascript"></script>
+    <script src="../assets/seajs/config.js" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zwqlQlRhdFmoVCcd0as86d46ceNbya1e" type="text/javascript"></script>
+    <!--<script src="../assets/libs/jquery.area.js" type="text/javascript"></script>-->
+
+    <style>
+        p {
+            height:10px;
+            line-height:10px;
+        }
+         #allmap {
+            width: 65%;
+            height: 500px;
+            overflow: hidden;
+            align-content:center;
+            margin: 0px;
+            font-family: "微软雅黑";
+        }
+        .js-hot-modelDelete{
+            cursor:pointer;
+            display:inline-block;
+            margin-left:5px;
+        }
+       
+       body,html{
+           margin-left:20px;
+           margin-top:10px;
+       }
+    </style>
+</head>
+<body>
+
+        <div class="h">     
+            <h3>编辑任务</h3>
+        </div>
+
+    <div>
+        <p></p>
+        <div>
+            <label>任务运行时间:</label><input style="margin-left:10px;line-height:30px;height:30px" id="starttime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />---<input style="margin-left:5px;line-height:30px;height:30px" id="stoptime" type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" />
+            <label style="margin-left:10px">打招呼频率(单位:秒)</label><input style="margin-left:10px;height:30px;width:60px;" name="sayhirate" id="sayhirate" type="text" value="10" />
+            <label style="margin-left:10px">最大打招呼的人数</label><input type="text" style="margin-left:10px;height:30px;width:60px;" name="sayhimaxcount" id="sayhimaxcount" value="10" />
+            <label style="margin-left:10px">任务状态</label><label style="margin-left:10px;color:red;" id="taskstatus"></label>
+        </div>
+
+        <div style="float:left;margin-bottom:10px;">       
+            <p></p>
+            <div>
+                <label>打招呼的内容:</label>
+                <textarea id="content" style="width:650px;height:100px; margin:10px;"></textarea>
+            </div>
+            <p></p>
+            <div>
+                <label>任务描述说明:</label>
+                <input id="remark" name="remark" type="text" style="margin-left:10px;height:30px;width:650px;" />
+            </div>
+
+            <p></p>
+            <div>
+                <label>输入搜索地址:</label>
+                <input style="margin-left:10px;line-height:30px;height:30px;width:500px;" id="suggestId" type="text" placeholder="输入地址可以进行搜索" />
+                <!--<input type="button" value="搜索" />-->
+                <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+
+                <input type="button" class="btn-lit btn-middle" style="margin-left:10px" value="保存配置信息" id="savetask" />
+                <input type="button" class="btn-lit btn-middle" style="margin-left:10px" id="refreshtask" value="刷新数据" />
+
+            </div>    
+
+        </div>
+
+        <div id="divDevice" style="float:left;margin-left:20px;margin-bottom:10px;margin-top:10px;display:none;">
+            <fieldset style="margin-left:10px;">
+                <legend>设备信息</legend>
+               
+                <div style="margin:20px;width:300px;">         
+                    <table>     
+                        <tr>
+                            <td>设 备 号<span style="margin-left:12px;margin-right:20px;" id="deviceno" /></td><td>设备名称<span style="margin-left:12px;margin-right:10px;" id="devicename" /></td>
+                        </tr>                    
+                       <tr>
+                           <td>系统版本<label style="margin-left:12px;margin-right:10px;" id="osversion" /></td><td>品牌<label style="margin-left:12px;margin-right:10px;" id="brand" /></td>
+                       </tr>            
+                        <tr>
+                            <td colspan="2">备注说明<label style="margin-left: 12px; margin-right:10px; " id="deviceremark"></label></td>
+                        </tr>                       
+                        </table>
+                </div>
+                         
+
+            </fieldset>
+
+        </div>
+
+    </div>
+    
+  
+  
+     <div style="margin-top:20px;">
+         <div id="allmap" style="float:left;"></div>
+         <div class="cnt-wp" id="js-ModelList" style="float:left;margin-left:20px;"></div>
+    </div>
+        
+      <div>
+        <script>seajs.use([ "datetime","baidumap"]);</script>
+    </div>
+
+</body>
+</html>

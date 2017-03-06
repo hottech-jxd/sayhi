@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A266DF6E-1FC0-48F9-B749-9FD77C67375A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>msite</RootNamespace>
+    <AssemblyName>msite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\res\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Senparc.Weixin.MP">
+      <HintPath>..\res\Senparc.Weixin.MP.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="A1001\index.aspx" />
+    <Content Include="A1001\login.aspx" />
+    <Content Include="A1001\myIndex.aspx" />
+    <Content Include="A1001\otherIndex.aspx" />
+    <Content Include="A1001\result.aspx" />
+    <Content Include="A1001\rule.html" />
+    <Content Include="A1001\success.html" />
+    <Content Include="A1001\modify.aspx" />
+    <Content Include="A1002\index.aspx" />
+    <Content Include="A1002\success.html" />
+    <Content Include="A1002\freeIndex.aspx" />
+    <Content Include="A1003\index.aspx" />
+    <Content Include="A1003\success.html" />
+    <Content Include="AjaxHandler.aspx" />
+    <Content Include="css\A1001.css" />
+    <Content Include="css\common.css" />
+    <Content Include="error\404.html" />
+    <Content Include="error\index.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\1002\1-1.jpg" />
+    <Content Include="images\1002\1.jpg" />
+    <Content Include="images\1002\2-1.jpg" />
+    <Content Include="images\1002\2.jpg" />
+    <Content Include="images\1002\3-1.jpg" />
+    <Content Include="images\1002\3.jpg" />
+    <Content Include="images\1003\1234.png" />
+    <Content Include="images\1003\logo.jpg" />
+    <Content Include="images\1003\top.jpg" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.jpg" />
+    <Content Include="images\def_qrcode.jpg" />
+    <Content Include="images\end.png" />
+    <Content Include="images\face-none.png" />
+    <Content Include="images\grey.png" />
+    <Content Include="images\kan.jpg" />
+    <Content Include="images\main-01_01.jpg" />
+    <Content Include="images\main.jpg" />
+    <Content Include="images\main.png" />
+    <Content Include="images\main02.jpg" />
+    <Content Include="images\pyq.png" />
+    <Content Include="images\qrcode.jpg" />
+    <Content Include="images\rule.png" />
+    <Content Include="images\success.png" />
+    <Content Include="images\title.jpg" />
+    <Content Include="images\title.png" />
+    <Content Include="images\title1.jpg" />
+    <Content Include="images\title2.jpg" />
+    <Content Include="images\untitled30.png" />
+    <Content Include="images\wensli_logo.jpg" />
+    <Content Include="JSDK\RegConfig.aspx" />
+    <Content Include="js\imgReady.js" />
+    <Content Include="js\jquery.area.js" />
+    <Content Include="js\layer\layer.js" />
+    <Content Include="js\layer\need\layer.css" />
+    <Content Include="js\loading\css\loading.gif" />
+    <Content Include="js\loading\css\swtMessageBox.css" />
+    <Content Include="js\loading\jquery.loading-0.1.js" />
+    <Content Include="js\setTimer.js" />
+    <Content Include="js\jquery-1.7.2.min.js" />
+    <Content Include="js\jquery.qrcode.min.js" />
+    <Content Include="js\smartLazyload.js" />
+    <Content Include="js\wxShare.js" />
+    <Content Include="OAuth2\WeixinCallback.aspx" />
+    <Content Include="struct.txt" />
+    <Content Include="WechatPropmt.html" />
+    <Content Include="css\style.css" />
+    <Content Include="images\icon_fail.png" />
+    <Content Include="OAuth2\WeixinAuthorize.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A1001\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1001\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1001\myIndex.aspx.cs">
+      <DependentUpon>myIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\myIndex.aspx.designer.cs">
+      <DependentUpon>myIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1001\otherIndex.aspx.cs">
+      <DependentUpon>otherIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\otherIndex.aspx.designer.cs">
+      <DependentUpon>otherIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1001\result.aspx.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\result.aspx.designer.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1001\modify.aspx.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1001\modify.aspx.designer.cs">
+      <DependentUpon>modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1002\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1002\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1002\freeIndex.aspx.cs">
+      <DependentUpon>freeIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1002\freeIndex.aspx.designer.cs">
+      <DependentUpon>freeIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="A1003\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1003\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjaxHandler.aspx.cs">
+      <DependentUpon>AjaxHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxHandler.aspx.designer.cs">
+      <DependentUpon>AjaxHandler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseClass.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JSDK\RegConfig.aspx.cs">
+      <DependentUpon>RegConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JSDK\RegConfig.aspx.designer.cs">
+      <DependentUpon>RegConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OAuth2\MPHelper.cs" />
+    <Compile Include="OAuth2\WeixinAuthorize.aspx.cs">
+      <DependentUpon>WeixinAuthorize.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OAuth2\WeixinAuthorize.aspx.designer.cs">
+      <DependentUpon>WeixinAuthorize.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OAuth2\WeixinCallback.aspx.cs">
+      <DependentUpon>WeixinCallback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OAuth2\WeixinCallback.aspx.designer.cs">
+      <DependentUpon>WeixinCallback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\epiproject.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\common\common.csproj">
+      <Project>{0567ceca-ffd6-491b-a0b6-cea58738474c}</Project>
+      <Name>common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\logic\logic.csproj">
+      <Project>{57951096-364d-4e2c-9e28-2b77af2bd5a8}</Project>
+      <Name>logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1787</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4447/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

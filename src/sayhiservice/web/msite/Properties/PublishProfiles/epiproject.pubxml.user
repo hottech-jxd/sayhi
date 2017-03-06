@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LastUsedBuildConfiguration>Release</LastUsedBuildConfiguration>
+    <LastUsedPlatform>Any CPU</LastUsedPlatform>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="A1001/index.aspx">
+      <publishTime>05/03/2016 18:22:57</publishTime>
+    </File>
+    <File Include="A1001/login.aspx">
+      <publishTime>05/03/2016 18:23:01</publishTime>
+    </File>
+    <File Include="A1001/modify.aspx">
+      <publishTime>05/03/2016 18:23:01</publishTime>
+    </File>
+    <File Include="A1001/myIndex.aspx">
+      <publishTime>05/03/2016 18:23:01</publishTime>
+    </File>
+    <File Include="A1001/otherIndex.aspx">
+      <publishTime>05/03/2016 18:23:08</publishTime>
+    </File>
+    <File Include="A1001/result.aspx">
+      <publishTime>05/03/2016 18:23:04</publishTime>
+    </File>
+    <File Include="A1001/rule.html">
+      <publishTime>05/03/2016 18:23:03</publishTime>
+    </File>
+    <File Include="A1001/success.html">
+      <publishTime>05/03/2016 18:23:03</publishTime>
+    </File>
+    <File Include="A1002/freeIndex.aspx">
+      <publishTime>05/03/2016 18:23:03</publishTime>
+    </File>
+    <File Include="A1002/index.aspx">
+      <publishTime>05/03/2016 18:23:05</publishTime>
+    </File>
+    <File Include="A1002/success.html">
+      <publishTime>05/03/2016 18:23:05</publishTime>
+    </File>
+    <File Include="A1003/index.aspx">
+      <publishTime>05/31/2016 15:24:20</publishTime>
+    </File>
+    <File Include="A1003/success.html">
+      <publishTime>05/03/2016 18:23:04</publishTime>
+    </File>
+    <File Include="AjaxHandler.aspx">
+      <publishTime>05/03/2016 18:14:02</publishTime>
+    </File>
+    <File Include="bin/common.dll">
+      <publishTime>05/31/2016 16:04:53</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>07/03/2014 10:56:49</publishTime>
+    </File>
+    <File Include="bin/logic.dll">
+      <publishTime>05/31/2016 16:04:53</publishTime>
+    </File>
+    <File Include="bin/msite.dll">
+      <publishTime>05/31/2016 16:04:53</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>05/03/2016 18:14:06</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>08/01/2015 05:16:18</publishTime>
+    </File>
+    <File Include="bin/NPOI.OOXML.dll">
+      <publishTime>08/01/2015 05:16:22</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXml4Net.dll">
+      <publishTime>08/01/2015 05:16:19</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXmlFormats.dll">
+      <publishTime>08/01/2015 05:16:21</publishTime>
+    </File>
+    <File Include="bin/Senparc.Weixin.MP.dll">
+      <publishTime>05/03/2016 18:14:05</publishTime>
+    </File>
+    <File Include="css/A1001.css">
+      <publishTime>05/03/2016 18:23:06</publishTime>
+    </File>
+    <File Include="css/common.css">
+      <publishTime>05/03/2016 18:23:06</publishTime>
+    </File>
+    <File Include="css/style.css">
+      <publishTime>05/03/2016 18:23:11</publishTime>
+    </File>
+    <File Include="error/10101.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10102.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10103.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10104.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10105.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10106.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10107.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10108.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10109.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10201.html">
+      <publishTime>03/29/2016 19:00:17</publishTime>
+    </File>
+    <File Include="error/10202.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/10203.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/10204.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/10205.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/10206.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/10207.html">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/404.html">
+      <publishTime>05/03/2016 18:23:11</publishTime>
+    </File>
+    <File Include="error/css/404baocuo.css">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/css/common.css">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_1.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_10.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_11.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_12.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_13.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_14.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_15.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_16.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_17.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_2.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_3.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_4.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_5.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_6.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_7.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_8.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/images/baocuo_tu_9.png">
+      <publishTime>03/29/2016 19:00:18</publishTime>
+    </File>
+    <File Include="error/index.aspx">
+      <publishTime>05/03/2016 18:23:11</publishTime>
+    </File>
+    <File Include="images/1.jpg">
+      <publishTime>05/03/2016 18:23:11</publishTime>
+    </File>
+    <File Include="images/1002/1-1.jpg">
+      <publishTime>05/03/2016 18:32:56</publishTime>
+    </File>
+    <File Include="images/1002/1.jpg">
+      <publishTime>05/03/2016 18:32:55</publishTime>
+    </File>
+    <File Include="images/1002/1.png">
+      <publishTime>04/06/2016 17:08:36</publishTime>
+    </File>
+    <File Include="images/1002/2-1.jpg">
+      <publishTime>05/03/2016 18:32:55</publishTime>
+    </File>
+    <File Include="images/1002/2.jpg">
+      <publishTime>05/03/2016 18:32:55</publishTime>
+    </File>
+    <File Include="images/1002/2.png">
+      <publishTime>04/06/2016 17:08:36</publishTime>
+    </File>
+    <File Include="images/1002/3-1.jpg">
+      <publishTime>05/03/2016 18:32:54</publishTime>
+    </File>
+    <File Include="images/1002/3.jpg">
+      <publishTime>05/03/2016 18:32:54</publishTime>
+    </File>
+    <File Include="images/1002/3.png">
+      <publishTime>04/06/2016 17:08:36</publishTime>
+    </File>
+    <File Include="images/1002/4.png">
+      <publishTime>04/06/2016 17:08:36</publishTime>
+    </File>
+    <File Include="images/1003/1234.png">
+      <publishTime>05/20/2016 15:29:20</publishTime>
+    </File>
+    <File Include="images/1003/logo.jpg">
+      <publishTime>05/03/2016 18:32:53</publishTime>
+    </File>
+    <File Include="images/1003/top.jpg">
+      <publishTime>05/03/2016 18:32:56</publishTime>
+    </File>
+    <File Include="images/2.png">
+      <publishTime>05/03/2016 18:23:11</publishTime>
+    </File>
+    <File Include="images/3.jpg">
+      <publishTime>05/03/2016 18:23:10</publishTime>
+    </File>
+    <File Include="images/def_qrcode.jpg">
+      <publishTime>05/03/2016 18:23:10</publishTime>
+    </File>
+    <File Include="images/end.png">
+      <publishTime>05/03/2016 18:23:16</publishTime>
+    </File>
+    <File Include="images/face-none.png">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/grey.png">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/icon_fail.png">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/kan.jpg">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/main-01_01.jpg">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/main.jpg">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/main.png">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/main02.jpg">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/pyq.png">
+      <publishTime>05/03/2016 18:23:15</publishTime>
+    </File>
+    <File Include="images/qrcode.jpg">
+      <publishTime>05/03/2016 18:23:19</publishTime>
+    </File>
+    <File Include="images/rule.png">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/success.png">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/title.jpg">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/title.png">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/title1.jpg">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/title2.jpg">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/untitled30.png">
+      <publishTime>05/03/2016 18:23:18</publishTime>
+    </File>
+    <File Include="images/wensli_logo.jpg">
+      <publishTime>05/03/2016 18:23:17</publishTime>
+    </File>
+    <File Include="js/imgReady.js">
+      <publishTime>05/03/2016 18:23:17</publishTime>
+    </File>
+    <File Include="js/jquery-1.7.2.min.js">
+      <publishTime>05/03/2016 18:23:23</publishTime>
+    </File>
+    <File Include="js/jquery.area.js">
+      <publishTime>05/20/2016 09:53:36</publishTime>
+    </File>
+    <File Include="js/jquery.qrcode.min.js">
+      <publishTime>05/03/2016 18:23:22</publishTime>
+    </File>
+    <File Include="js/layer/layer.js">
+      <publishTime>05/03/2016 18:32:55</publishTime>
+    </File>
+    <File Include="js/layer/need/layer.css">
+      <publishTime>05/03/2016 18:37:55</publishTime>
+    </File>
+    <File Include="js/loading/css/loading.gif">
+      <publishTime>05/03/2016 18:37:54</publishTime>
+    </File>
+    <File Include="js/loading/css/swtMessageBox.css">
+      <publishTime>05/03/2016 18:37:54</publishTime>
+    </File>
+    <File Include="js/loading/jquery.loading-0.1.js">
+      <publishTime>05/03/2016 18:32:55</publishTime>
+    </File>
+    <File Include="js/setTimer.js">
+      <publishTime>05/03/2016 18:23:23</publishTime>
+    </File>
+    <File Include="js/smartLazyload.js">
+      <publishTime>05/03/2016 18:23:22</publishTime>
+    </File>
+    <File Include="js/wxShare.js">
+      <publishTime>05/03/2016 18:23:22</publishTime>
+    </File>
+    <File Include="JSDK/RegConfig.aspx">
+      <publishTime>05/03/2016 18:23:22</publishTime>
+    </File>
+    <File Include="OAuth2/WeixinAuthorize.aspx">
+      <publishTime>05/03/2016 18:23:25</publishTime>
+    </File>
+    <File Include="OAuth2/WeixinCallback.aspx">
+      <publishTime>05/03/2016 18:23:25</publishTime>
+    </File>
+    <File Include="struct.txt">
+      <publishTime>05/03/2016 18:14:06</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/31/2016 16:04:53</publishTime>
+    </File>
+    <File Include="WechatPropmt.html">
+      <publishTime>05/03/2016 18:14:05</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

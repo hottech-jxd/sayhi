@@ -1,0 +1,10 @@
+X:\code\epibolyProject\admin\obj\Release\admin.csprojResolveAssemblyReference.cache
+X:\code\epibolyProject\admin\bin\admin.dll
+X:\code\epibolyProject\admin\bin\admin.pdb
+X:\code\epibolyProject\admin\bin\common.dll
+X:\code\epibolyProject\admin\bin\logic.dll
+X:\code\epibolyProject\admin\bin\Newtonsoft.Json.dll
+X:\code\epibolyProject\admin\bin\common.pdb
+X:\code\epibolyProject\admin\bin\logic.pdb
+X:\code\epibolyProject\admin\obj\Release\admin.dll
+X:\code\epibolyProject\admin\obj\Release\admin.pdb

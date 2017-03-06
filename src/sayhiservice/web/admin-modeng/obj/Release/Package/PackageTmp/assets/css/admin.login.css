@@ -1,0 +1,31 @@
+﻿
+html,body{ background: #B2BCCC; overflow:hidden; height:100%; }
+.login table{ width:100%; height:auto; }
+.hide{ display:none; }
+.middle{ vertical-align:middle; }
+.login{ width:100%; min-height:100%; height:100%; }
+.login_top { height:41px; background: url(../images/login-top.gif) repeat-x; }
+.login_title { color: #CED3DF; line-height: 28px; font-size:18px; font-weight:bold; border-bottom:1px solod #6C869F; }
+.login_middle_1 { width:100%; height:138px; background: url(../images/login_middle_1.gif) repeat-x; }
+.login_middle_2 { width:100%; background: #EAEDF4; }
+.login_middle_3 { width:100%; height:138px; background: url(../images/login_middle_3.gif) repeat-x; }
+.login_welcome{ float:right; width:242px; height:138px; margin-right:250px; background: url(../images/login-welcome.gif) no-repeat; }
+.login-bottom { color: #ABCAD3; font-size: 10px; font-weight:bold; height:20px; background: url(../images/login-bottom.gif) repeat-x; }
+.login_form_pad{ width:25%; }
+.login_form_label{ width:50px; height:38px; line-height: 38px; color: #333333; }
+.login_input { width:176px; height:18px; line-height:18px; border: 1px solid #6C869F; }
+
+
+/*登录*/
+.login_back{ width:100%; height:100%; background:url(../img/login.gif) center top #e7e7e7;}
+.log_box{ margin:0 auto; width:650px;}
+.log_left{ float:left;}
+.log_left img.log{ float:left;}
+.log_left span{ float:left; padding:30px 0}
+.log_left span p{ padding:10px 0 0 38px; color:#b5b5b5; font-family:宋体;}
+
+.log_right{ float:left;margin-left:50px;margin-top:10px; color:#2e3740;}
+label, input, button, textarea, select{ vertical-align:middle;}
+.in{ width:150px; border:1px solid #2e3740; height:20px; line-height:20px;}
+a.line:hover{ text-decoration:underline;}
+.tt{ font-size:14px; color:#2e3740;  display:block;}

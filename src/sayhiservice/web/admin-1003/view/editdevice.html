@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>编辑设备</title>
+    <link href="../assets/css/admin.content.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/admin.global.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/libs/JGrid/theme/Jackson_skin_gray.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet" />
+    <script src="../assets/seajs/sea.js" type="text/javascript"></script>
+    <script src="../assets/seajs/config.js" type="text/javascript"></script>
+    <style>
+        body, html {
+            margin: 20px;
+        }
+
+        p {
+            height: 10px;
+            line-height: 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="h">       
+        <h3>编辑任务</h3>
+    </div>
+
+    <div>
+
+        <div style="margin:20px">
+            <label id="deviceid" style="visibility:hidden"></label>
+            <label>设备名称</label><input readonly="readonly" style="margin-left:12px;margin-right:10px;line-height:30px;height:30px" type="text" id="devicename" /><label>设备号</label><input style="margin-left:12px;line-height:30px;height:30px" readonly="readonly" id="deviceno" type="text" />
+    </div>
+    
+        <div style="margin:20px">
+            <label>系统版本</label><input readonly="readonly" style="margin-left: 12px; margin-right: 10px; line-height: 30px; height: 30px" type="text" id="osversion" /><label style="margin-left:12px;">品牌</label><input readonly="readonly" style="margin-left:12px;line-height:30px;height:30px" type="text" id="brand" />
+        </div>
+       
+        <div style="margin:20px">
+            <label>创建时间</label><input readonly="readonly" style="margin-left: 12px; margin-right: 10px; line-height: 30px; height: 30px" type="text" id="createtime" />
+        </div>
+    
+        <div style="margin:20px">
+            <label>备注说明</label><textarea style="margin-left: 12px; margin-right: 10px; height:100px;width:50%;"  id="remark"></textarea>
+        </div>
+        <div style="margin:20px;align-content:center;width:80%;">
+            <input class="btn-lit btn-middle" type="button"  value="保存" id="savedevice" />
+        </div>
+
+        </div>
+
+    <script>seajs.use(["datetime", "editdevice"]);</script>
+
+</body>
+</html>

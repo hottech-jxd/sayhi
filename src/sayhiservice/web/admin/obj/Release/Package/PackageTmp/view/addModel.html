@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/global.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js" type="application/javascript"></script>
+    <script src="../assets/seajs/config.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="block">
+    <div class="h">
+        <span class="icon-sprite icon-list"></span>
+        <h3>添加模型</h3>
+        <div class="bar">
+            <a class="btn-lit" href="modelList.html" target="content">
+                <span>返回模型管理列表</span></a>
+        </div>
+    </div>
+    <div class="cnt-wp">
+        <form method="post" id="addModelForm">
+        <div class="cnt form">
+            <div class="division">
+                <input type="hidden" name="hidModelID" id="hidModelID" >
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tbody>
+                    <tr>
+                        <th>模型名称：</th>
+                        <td>
+                            <input name="txtModelName" type="text" id="txtModelName" maxlength="50" class="input-normal"  placeholder="请输入模型名称">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>模型描述：</th>
+                        <td>
+                            <textarea rows="" cols="" style="width: 250px; height: 60px;" class="input-normal" id="txtModelDescription" name="txtModelDescription" ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>模型类型：</th>
+                        <td>
+                            <select name="txtModelType" class="input-normal" id="txtModelType">
+                                <option value="-1">==请选择模型类型==</option>
+                                <option value="0">文章模型</option>
+                                <option value="1">公告模型</option>
+                                <option value="2">视频模型</option>
+                                <option value="3">图库模型</option>
+                                <option value="4">下载模型</option>
+                                <option value="5">链接模型</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>排序权重：</th>
+                        <td>
+                            <input name="txtOrderWeight" type="text" id="txtOrderWeight" value="50" class="input-normal" placeholder="请输入排序权重">
+                            <span style="color:#ccc;">数字越大排越前面</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="text-align: center;">
+                <input type="submit" class="btn-lit" name="btnSave"  value="保存" data-submiting-text="提交中..." data-text="保存" id="jq-cms-Save">
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<script>seajs.use(["validate","message","AddModel"]);</script>
+</body>
+</html>

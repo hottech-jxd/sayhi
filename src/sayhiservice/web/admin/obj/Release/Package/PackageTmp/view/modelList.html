@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <link href="../assets/css/admin.content.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/admin.global.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/libs/JGrid/theme/Jackson_skin_gray.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet" />
+    <link href="../assets/libs/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" />
+    <script src="../assets/seajs/sea.js"></script>
+    <script src="../assets/seajs/config.js"></script>
+</head>
+<body>
+    <div class="search block">
+        <div class="h">
+            <span class="icon-sprite icon-magnifier"></span>
+            <h3>快速搜索</h3>
+        </div>
+        <div class="cnt-wp">
+            <div class="cnt">
+                <div class="search-bar">
+                    <label class="first ">关键字：</label>
+                    <input name="modelName" type="text" id="modelName" class="input-small" style="width: 200px;" placeholder=" 优惠券码、用户昵称">
+                    <label class="first ">使用状态：</label>
+                    <select id="selUse">
+                        <option value="-1">默认</option>
+                        <option value="1">已使用</option>
+                        <option value="0">未使用</option>
+                    </select>
+                    <label class="first ">生成时间：</label>
+                    <input name="txtStartTime" type="text" id="txtStartTime" class="input-small" style="width: 200px;" placeholder=" 开始时间" readonly="readonly" onclick="WdatePicker()">
+                    <input name="txtEndTime" type="text" id="txtEndTime" class="input-small" style="width: 200px;" placeholder=" 结束时间" readonly="readonly" onclick="WdatePicker()">
+                    <label><a class="btn-lit btn-middle " id="jq-cms-search" href="javascript:" style="margin-bottom: 3px;"><span>搜索</span></a></label>
+                    <label><a class="btn-lit btn-middle " id="jq-cms-searchAll" href="javascript:" style="margin-bottom: 3px;"><span>显示所有</span></a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="h">
+            <span class="icon-sprite icon-list"></span>
+            <h3 style="float: left; width: 144px;">优惠券列表</h3>
+            <div class="bar">
+            </div>
+        </div>
+        <div class="cnt-wp" id="js-ModelList"></div>
+    </div>
+    <script>seajs.use(["datetime", "JGrid", "modelList"]);</script>
+</body>
+</html>

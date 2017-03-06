@@ -1,0 +1,201 @@
+﻿.swt-messageBox-window
+{
+    width: 290px;
+    position: fixed; /*display: none;*/
+    margin: -50px auto 0 -145px;
+    padding: 2px; /*bottom: 60px;*/
+    top: 40%;
+    left: 50%;
+    border-radius: .6em;
+    -webkit-border-radius: .6em;
+    -moz-border-radius: .6em;
+    background-color: #f1f1f1;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font: 14px/1.5 Microsoft YaHei, Helvitica, Verdana, Arial, san-serif;
+}
+.swt-messageBox-window .swt-messageBox-title
+{
+    background-color: #585858;
+    line-height: 26px;
+    padding: 5px 5px 5px 10px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: .5em .5em 0 0;
+    -webkit-border-radius: .5em .5em 0 0;
+    -moz-border-radius: .5em .5em 0 0;
+}
+.swt-messageBox-window .swt-messageBox-content
+{
+    overflow: auto;
+    padding: 10px;
+    color: #222;
+    text-shadow: 0 1px 0 #FFF;
+}
+.swt-messageBox-window .swt-messageBox-content-html
+{
+    min-height: 30px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align:center;
+}
+.swt-messageBox-window .swt-messageBox-content p
+{
+    margin: 10px 0 0 0;
+}
+
+.swt-messageBox-close
+{
+    float: right;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACTSURBVEhL7dNtCoAgDAZgb60nsGN1tPLVCVNHmg76kQ8E1mwv+GG27cestQ4PvTZ69SFocBGpWa8+zHt/Up+IN+MhgLlUmnIE1CpBQB2COZibfpnXhHFaIZkYph0SOeeK/QJ8o7KOek84fkCWSBtfL+Ny2MPpCkPFMH6PWEhWhKncIyEk69VfiUuVhqJefds+YcwNbEwxGqGIFWYAAAAASUVORK5CYII=");
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+
+.swt-messageBox-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .1;
+    filter: alpha(opacity=0);
+    display: none;
+    z-index: 9;
+}
+
+.submit2
+{
+    background-color: #999;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid #E0E0E0;
+    background-image: linear-gradient(bottom, #cccccc 0, #fff 100%);
+    background-image: -o-linear-gradient(bottom, #cccccc 0, #fff 100%);
+    background-image: -moz-linear-gradient(bottom, #cccccc 0, #fff 100%);
+    background-image: -webkit-linear-gradient(bottom, #cccccc 0, #fff 100%);
+    background-image: -ms-linear-gradient(bottom, #cccccc 0, #fff 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(1, #fff));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #333;
+    display: block;
+    text-align: center;
+    text-shadow: 0 1px rgba(255,255,255,0.5);
+}
+.submit2:active
+{
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 11px;
+    top: 0;
+    background-image: linear-gradient(bottom, #cccccc 0, #cccccc 100%);
+    background-image: -o-linear-gradient(bottom, #cccccc 0, #cccccc 100%);
+    background-image: -moz-linear-gradient(bottom, #cccccc 0, #cccccc 100%);
+    background-image: -webkit-linear-gradient(bottom, #cccccc 0, #cccccc 100%);
+    background-image: -ms-linear-gradient(bottom, #cccccc 0, #cccccc 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #cccccc), color-stop(1, #cccccc));
+}
+.submit2 img
+{
+    width: 15px;
+    margin: -4px 10px 0 0;
+}
+
+
+.submit3
+{
+    background-color: #ffb400;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid #ff7200;
+    background-image: linear-gradient(bottom, #ff7200 0, #ffb400 100%);
+    background-image: -o-linear-gradient(bottom, #ff7200 0, #ffb400 100%);
+    background-image: -moz-linear-gradient(bottom, #ff7200 0, #ffb400 100%);
+    background-image: -webkit-linear-gradient(bottom, #ff7200 0, #ffb400 100%);
+    background-image: -ms-linear-gradient(bottom, #ff7200 0, #ffb400 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff7200), color-stop(1, #ffa200));
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-size: 12.5pt;
+}
+.submit3:active
+{
+    padding-bottom: 9px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 11px;
+    top: 0;
+    background-image: linear-gradient(bottom, #ff6000 0, #ff4200 100%);
+    background-image: -o-linear-gradient(bottom, #ff6000 0, #ff4200 100%);
+    background-image: -moz-linear-gradient(bottom, #ff6000 0, #ff4200 100%);
+    background-image: -webkit-linear-gradient(bottom, #ff6000 0, #ff4200 100%);
+    background-image: -ms-linear-gradient(bottom, #ff6000 0, #ff4200 100%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ff6000), color-stop(1, #ff4200));
+}
+
+#swt-messageBox-waiting
+{
+    position: fixed; /*display: none;*/
+    margin: -50px auto 0 -73px;
+    top: 40%;
+    left: 50%;
+    z-index: 999999;
+}
+#swt-messageBox-waiting .bk, #swt-messageBox-waiting .cont
+{
+    width: 146px;
+    height: 146px;
+}
+#swt-messageBox-waiting .bk, #swt-messageBox-waiting .cont
+{
+    position: relative;
+}
+#swt-messageBox-waiting .bk
+{
+    background-color: #000;
+    opacity: .5;
+    border-radius: 10px;
+    z-index: 0;
+}
+#swt-messageBox-waiting .cont
+{
+    margin: -146px 0 0 0;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 14px;
+    line-height: 35px;
+    z-index: 1;
+
+}
+#swt-messageBox-waiting .cont2
+{
+    background-repeat:no-repeat;
+    background-image:url('loading.gif') ;
+    position:absolute;
+}
+
+#swt-messageBox-waiting img
+{
+    width: 35px;
+    height: 35px;
+    margin: 30px auto;
+    display: block;
+}

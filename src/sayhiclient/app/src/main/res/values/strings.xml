@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">打招呼</string>
+
+    <string name="description">微信打招呼插件</string>
+
+    <string name="speak">Hello!你好。</string>
+
+    <string name="NearbyFriendsUI_title">android:id/text1</string>
+    <string name="NearbyFriendsUI_name">com.tencent.mm:id/ali</string>
+    <string name="NearbyFriendsUI_sex">com.tencent.mm:id/bv8</string>
+    <string name="NearbyFriendsUI_back">com.tencent.mm:id/gw</string>
+
+    <string name="ContactInfoUI_title">android:id/text1</string>
+    <string name="ContactInfoUI_back">com.tencent.mm:id/gw</string>
+    <string name="ContactInfoUI_name">com.tencent.mm:id/la</string>
+    <string name="ContactInfoUI_area">android:id/summary</string>
+    <string name="ContactInfoUI_distance">com.tencent.mm:id/ad6</string>
+    <string name="ContactInfoUI_sayHi">com.tencent.mm:id/acw</string>
+    <string name="ContactInfoUI_sendMessage">com.tencent.mm:id/ad0</string>
+
+    <string name="SayHiEditUI_title">android:id/text1</string>
+    <string name="SayHiEditUI_back">com.tencent.mm:id/gw</string>
+    <string name="SayHiEditUI_send">com.tencent.mm:id/gd</string>
+    <string name="SayHiEditUI_content">com.tencent.mm:id/c9p</string>
+
+    <string name="ChattingUI_title">com.tencent.mm:id/gh</string>
+    <string name="ChattingUI_content">com.tencent.mm:id/a2v</string>
+    <string name="ChattingUI_send">com.tencent.mm:id/a31</string>
+    <string name="ChattingUI_back">com.tencent.mm:id/gg</string>
+
+    <string name="NoFindUI_back">com.tencent.mm:id/gw</string>
+    <string name="NoFindUI_Content">暂时没有找到附近也使用该功能的人，请稍后再尝试查看。</string>
+
+    <integer name="sayHi_count">20</integer>
+
+
+</resources>

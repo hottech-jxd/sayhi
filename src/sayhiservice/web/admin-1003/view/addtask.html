@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/libs/JGrid/theme/Jackson_skin_gray.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js" type="text/javascript"></script>
+    <script src="../assets/seajs/config.js" type="text/javascript"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zwqlQlRhdFmoVCcd0as86d46ceNbya1e" type="text/javascript"></script>
+
+    <style>
+        p {
+            height:10px;
+            line-height:10px;
+        }
+         #allmap {
+            width: 65%;
+            height: 550px;
+            overflow: hidden;
+            align-content:center;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+        .js-hot-modelDelete{
+            cursor:pointer;
+            display:inline-block;
+            margin-left:5px;
+        }
+       
+       body,html{
+           margin-left:20px;
+           margin-top:10px;
+       }
+    </style>
+</head>
+<body>
+        <div class="h">      
+            <h3>新增任务</h3>
+        </div>
+    <br />
+        <div>
+            <label>任务运行时间:</label><input readonly="readonly" style="margin-left:12px;line-height:30px;height:30px" id="starttime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />---<input readonly="readonly" style="margin-left:5px;line-height:30px;height:30px" id="stoptime" type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" />            
+
+            <label style="margin-left:10px">打招呼频率(单位:秒)</label><input style="margin-left:10px;height:30px;width:80px;" name="sayhirate" id="sayhirate" type="text" value="10" />
+
+            <label style="margin-left:10px">最大打招呼的人数</label><input type="text" style="margin-left:10px;height:30px" name="sayhimaxcount" id="sayhimaxcount" value="10" />
+        </div>
+    <br />
+        <div>
+            <label>打招呼的内容:</label>            
+            <textarea id="content" style="width:60%;height:100px; margin:10px;" ></textarea>
+        </div>
+    <br />
+        <div>
+            <label>任务描述说明:</label>
+            <input id="remark" name="remark" type="text" style="margin-left:10px;height:30px;width:60%;" />         
+        </div>
+    <br />
+    <div>
+        <label>输入搜索地址:</label>
+        <input style="margin-left:10px;line-height:30px;height:30px;width:50%" id="suggestId" type="text" placeholder="输入地址可以进行搜索" />
+
+        <input class="btn-lit btn-middle" type="button" style="margin-left:10px" value="保存配置" id="savetask" />
+
+        <!--<input type="button" value="搜索" />-->
+        <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+    </div>
+
+    <!--<div class="cnt-wp" id="js-ModelList">
+    </div>-->
+    
+    <p></p>
+  
+        <div >
+            <div id="allmap" style="float:left"></div>
+
+            <div class="cnt-wp" style="float:left;margin-left:20px" id="js-ModelList"></div>
+
+        </div>
+        
+ 
+        
+       <div>
+
+    <script>seajs.use([ "datetime","baidumap"]);</script>
+</div>
+
+</body>
+</html>

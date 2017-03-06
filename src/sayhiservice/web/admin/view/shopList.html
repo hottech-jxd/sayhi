@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <link  href="../assets/css/admin.content.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/css/admin.global.css"  type="text/css" rel="stylesheet"/>
+    <link  href="../assets/libs/JGrid/theme/Jackson_skin_gray.css"  type="text/css" rel="stylesheet"/>
+    <link href="../assets/libs/layer/skin/layer.css" rel="stylesheet"/>
+    <script src="../assets/seajs/sea.js"></script>
+    <script src="../assets/seajs/config.js"></script>
+</head>
+<body>
+<div class="search block">
+    <div class="h">
+        <span class="icon-sprite icon-magnifier"></span>
+        <h3>快速搜索</h3>
+    </div>
+    <div class="cnt-wp">
+        <div class="cnt">
+            <div class="search-bar">
+                <label class="first ">搜索关键字：</label>
+                <input name="modelName" type="text" id="modelName" class="input-small" style="width: 200px;" placeholder=" 搜索关键字">
+                <label class="first ">大区：</label>
+                <select id="selarea">
+                    <option value="">全部</option>
+                    <option value="浙江大区">浙江大区</option>
+                    <option value="西南大区">西南大区</option>
+                    <option value="湘鄂大区">湘鄂大区</option>
+                    <option value="华南大区">华南大区</option>
+                    <option value="福建特区">福建特区</option>
+                    <option value="皖赣大区">皖赣大区</option>
+                    <option value="华北大区">华北大区</option>
+                    <option value="晋蒙豫大区">晋蒙豫大区</option>
+                    <option value="山东大区">山东大区</option>
+                    <option value="苏沪大区">苏沪大区</option>
+                    <option value="西北大区">西北大区</option>
+                </select>
+                <label class="first ">省份：</label>
+                <select id="selpro">
+                    <option value="">全部</option>
+                    <option value="浙江">浙江</option>
+                    <option value="四川">四川</option>
+                    <option value="重庆">重庆</option>
+                    <option value="贵州">贵州</option>
+                    <option value="云南">云南</option>
+                    <option value="湖北">湖北</option>
+                    <option value="湖南">湖南</option>
+                    <option value="广西">广西</option>
+                    <option value="海南">海南</option>
+                    <option value="广东">广东</option>
+                    <option value="福建">福建</option>
+                    <option value="安徽">安徽</option>
+                    <option value="江西">江西</option>
+                    <option value="北京">北京</option>
+                    <option value="河北">河北</option>
+                    <option value="内蒙古">内蒙古</option>
+                    <option value="山西">山西</option>
+                    <option value="河南">河南</option>
+                    <option value="山东">山东</option>
+                    <option value="江苏">江苏</option>
+                    <option value="上海">上海</option>
+                    <option value="辽宁">辽宁</option>
+                    <option value="吉林">吉林</option>
+                    <option value="黑龙江">黑龙江</option>
+                    <option value="甘肃">甘肃</option>
+                    <option value="宁夏">宁夏</option>
+                    <option value="新疆">新疆</option>
+                    <option value="陕西">陕西</option>
+                </select>
+                <label><a class="btn-lit btn-middle " id="jq-cms-search" href="javascript:" style="margin-bottom: 3px;"><span>搜索</span></a></label>
+                <label><a class="btn-lit btn-middle " id="jq-cms-searchAll" href="javascript:" style="margin-bottom: 3px;"><span>显示所有</span></a></label>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block">
+    <div class="h">
+        <span class="icon-sprite icon-list"></span>
+        <h3 style="float: left; width: 144px;">门店列表</h3>
+        <div class="bar">
+        </div>
+    </div>
+    <div class="cnt-wp" id="js-ModelList"></div>
+</div>
+<script>seajs.use(["JGrid","shopList"]);</script>
+</body>
+</html>

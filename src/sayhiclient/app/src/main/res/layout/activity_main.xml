@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@android:color/white"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jxd.mocklocation.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/lay1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="经度："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edLng"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:hint="请输入经度"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_below="@id/lay1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="纬度："
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/edLat"
+            android:hint="请输入纬度"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/lay2"
+        android:id="@+id/lay3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="打招呼内容:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/etcontent"
+            android:layout_weight="1"
+            android:maxLines="8"
+            android:textSize="14sp"
+            android:hint="请输入打招呼的内容"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/lay3"
+        android:id="@+id/lay4"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="设置可以打招呼的最大人数:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/etMaxCount"
+            android:layout_weight="1"
+            android:maxLines="8"
+            android:textSize="14sp"
+            android:text="1000"
+            android:hint="请输入最大人数"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/lay4"
+        android:id="@+id/lay5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="打招呼频率(单位秒):"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/etRate"
+            android:layout_weight="1"
+            android:maxLines="8"
+            android:textSize="14sp"
+            android:text="10"
+            android:hint="请输入频率"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_below="@id/lay5"
+        android:id="@+id/btnSet"
+        android:padding="10dp"
+        android:text="设置"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_below="@id/btnSet"
+        android:text="启动微信app"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:id="@+id/btnStartwechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_below="@id/btnStartwechat"
+        android:text="测试服务"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnregisterdevice"
+        android:layout_below="@id/btnTest"
+        android:text="注册设备"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btntestgettask"
+        android:layout_below="@id/btnregisterdevice"
+        android:text="测试获得设备的任务"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
