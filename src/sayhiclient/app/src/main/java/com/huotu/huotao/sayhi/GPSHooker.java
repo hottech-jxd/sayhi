@@ -305,8 +305,13 @@ public class GPSHooker implements IXposedHookLoadPackage , IXposedHookZygoteInit
 						try {
 							if (m != null) {
 
-								m.invoke(gss, svCount, prns, snrs, elevations, azimuths, ephemerisMask, almanacMask, usedInFixMask, prns);
-								param.setResult(gss);
+								if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+									m.invoke(gss, svCount, prns, snrs, elevations, azimuths, ephemerisMask, almanacMask, usedInFixMask);
+									param.setResult(gss);
+								}else {
+									m.invoke(gss, svCount, prns, snrs, elevations, azimuths, ephemerisMask, almanacMask, usedInFixMask, prns);
+									param.setResult(gss);
+								}
 							}
 						} catch (Exception e) {
 							XposedBridge.log(e);

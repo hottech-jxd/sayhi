@@ -71,19 +71,23 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
             if ( rootNode == null) return;
             if(sayHiBean==null){
                 LogUtils.log("提供的打招呼的信息为空,无法进行打招呼操作");
+                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if ( sayHiBean.getMaxCount() < 1) {
                 LogUtils.log( "可以打招呼的最大人数是0，因此无需打招呼");
+                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if ( sayHiBean.getContent() == null || sayHiBean.getContent().isEmpty()) {
                 LogUtils.log("打招呼的内容是空，无需打招呼");
+                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if( sayHiBean.getStatus() == Constants.TASK_LOCATION_STATUS_FINISHED ){
                 String json = WechatUtils.getGson().toJson(sayHiBean);
                 LogUtils.log("当前位置的打招呼操作已经完成!位置信息"+ json );
+                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
 
