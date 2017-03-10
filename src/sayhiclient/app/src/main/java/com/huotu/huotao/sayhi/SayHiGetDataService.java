@@ -1,22 +1,19 @@
 package com.huotu.huotao.sayhi;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.RemoteException;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-
 import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.XposedHelpers;
-import okhttp3.internal.Util;
-
-import static de.robv.android.xposed.XposedHelpers.callMethod;
 import static de.robv.android.xposed.XposedHelpers.callStaticMethod;
 
+/***
+ *  定期请求任务配置信息的系统服务
+ */
 public class SayHiGetDataService extends IGetDataAidlInterface.Stub {
     private static final String SERVICE_NAME = "sayhigetData.service";
     static SayHiGetDataService sayHiGetDataService;
@@ -42,33 +39,22 @@ public class SayHiGetDataService extends IGetDataAidlInterface.Stub {
 
     @Override
     public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
-
     }
 
     @Override
     public String getData() throws RemoteException {
-
-//        GetDataThread thread = new GetDataThread(this.mContext);
-//        thread.startRun();
-//        XposedBridge.log("---------GetDataThread Runing---------------");
-
-
         return "I am jinxiangdong";
-
-
     }
 
     @Override
     public void systemReady() {
+
         XposedBridge.log("---------SayHiGetDataService.systemReady---------------");
 
         GetDataThread thread = new GetDataThread(this.mContext);
         thread.startRun();
-        XposedBridge.log("---------GetDataThread Runing---------------");
 
-//        Intent intent = new Intent();
-//        intent.setAction( Constants.ACTION_HOUTAO_SAYHI_GETDATA );
-//        mContext.sendBroadcast(intent);
+        XposedBridge.log("---------GetDataThread Runing---------------");
 
     }
 

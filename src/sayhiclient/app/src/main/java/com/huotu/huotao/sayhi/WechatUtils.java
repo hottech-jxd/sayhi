@@ -24,7 +24,7 @@ import static com.huotu.huotao.sayhi.LogUtils.log;
 /**
  * Created by jinxiangdong on 2017/2/16.
  */
-public class WechatUtils {
+public class WechatUtils extends AccessiblityBase{
     //微信app主界面类名
     String LAUNCHERUI_PACKAGECLASSNAME = "com.tencent.mm.ui.LauncherUI";
     //附近的人介绍界面类名
@@ -37,6 +37,10 @@ public class WechatUtils {
     String SAYHI_PACKAGECLASSNAME = "com.tencent.mm.ui.contact.SayHiEditUI";
     //聊天界面
     String CHATTINGUI_PACKAGENCLASSAME ="com.tencent.mm.ui.chatting.ChattingUI";
+    //登录界面
+    String  LOGINHISTORYUI_PACKAGECLASSNAME ="com.tencent.mm.ui.account.LoginHistoryUI";
+    //手机登录界面
+    String MOBILEINPUTUI_PACKAGECLASSNAME ="com.tencent.mm.ui.account.mobile.MobileInputUI";
     //
     String WIDGET_LISTVIEW="android.widget.ListView";
 
@@ -45,13 +49,13 @@ public class WechatUtils {
 //    String string_startFind="开始查看";
 //    boolean isIntroUi=false;
 
-    boolean is_SayHiUI=false;
-    boolean is_ChattingUI=false;
-    boolean is_ContactInfoUI=false;
+    //boolean is_SayHiUI=false;
+    //boolean is_ChattingUI=false;
+    //boolean is_ContactInfoUI=false;
     boolean isFindTab = false;
     boolean isFindNear = false;
 
-    AccessibilityService accessibilityService;
+    //AccessibilityService accessibilityService;
     SayHiBean currentSayhiData;
     NearPersonBean currentNearPerson;
     private  static Gson gson;
@@ -111,60 +115,63 @@ public class WechatUtils {
     void sayHi(AccessibilityNodeInfo rootNode , AccessibilityEvent accessibilityEvent ) {
         if (rootNode == null || accessibilityEvent ==null ) return;
 
-        if( SayHiCache.isTaskFinished(currentSayhiData, accessibilityService) ){//
-            return;
-        }
+//        if( SayHiCache.isTaskFinished(currentSayhiData, accessibilityService) ){//
+//            return;
+//        }
 
         //判断当前位置，是否找到附近的人信息，如果没有找到人，则不处理。
         SayHiResultBean sayHiResultBean = SayHiCache.getSayHiResult(currentSayhiData);
-        if( sayHiResultBean !=null && sayHiResultBean.isNoFindNearPerson()){return;}
-
-        boolean canOperate = canSayHiOperate();
-        if( !canOperate){
-            Log.i( WechatUtils.class.getName(), "打招呼的操作已经完成，无需继续进行打招呼操作");
+        if( sayHiResultBean !=null && sayHiResultBean.isNoFindNearPerson()){
+            LogUtils.log("当前位置，无法找到附近的人");
             return;
         }
 
+//        boolean canOperate = canSayHiOperate();
+//        if( !canOperate){
+//            Log.i( WechatUtils.class.getName(), "打招呼的操作已经完成，无需继续进行打招呼操作");
+//            return;
+//        }
+
         String className = accessibilityEvent.getClassName().toString();
-        //Log.w(WechatUtils.class.getName(), "RootNode ClassName="+ className);
+
         if(className.equals( LAUNCHERUI_PACKAGECLASSNAME )){//微信主界面
             //launcherUI(rootNode , accessibilityEvent);
 
-            is_SayHiUI=false;
-            is_ChattingUI=false;
-            is_ContactInfoUI=false;
+            //is_SayHiUI=false;
+            //is_ChattingUI=false;
+            //is_ContactInfoUI=false;
 
         }else if (className.equals(NEARPERSON_INTROUI_PACKAGECLASSNAME)) {//附近的人的介绍界面
             intro(rootNode);
 
-            is_SayHiUI=false;
-            is_ChattingUI=false;
-            is_ContactInfoUI=false;
+            //is_SayHiUI=false;
+            //is_ChattingUI=false;
+            //is_ContactInfoUI=false;
 
         } else if (className.equals(NEARPERSON_LISTUI_PACKAGECLASSNAME)) {//附近的人列表界面
             //find_nearperson_list( rootNode);
 
-            is_SayHiUI=false;
-            is_ChattingUI=false;
-            is_ContactInfoUI=false;
+            //is_SayHiUI=false;
+            //is_ChattingUI=false;
+            //is_ContactInfoUI=false;
 
         } else if (className.equals(NEARPERSON_CONTACTINFO_PACKAGECLASSNAME)) {//附近的人详细信息界面
 
-            is_SayHiUI=false;
-            is_ChattingUI=false;
-            is_ContactInfoUI=true;
+            //is_SayHiUI=false;
+            //is_ChattingUI=false;
+            //is_ContactInfoUI=true;
 
         } else if (className.equals(SAYHI_PACKAGECLASSNAME)) {//打招呼界面
             //speakSayHi(rootNode);
-            is_SayHiUI=true;
-            is_ChattingUI=false;
-            is_ContactInfoUI=false;
+            //is_SayHiUI=true;
+            //is_ChattingUI=false;
+            //is_ContactInfoUI=false;
 
         } else if( className.equals( CHATTINGUI_PACKAGENCLASSAME )) {//聊天界面
 
-            is_SayHiUI=false;
-            is_ChattingUI=true;
-            is_ContactInfoUI=false;
+            //is_SayHiUI=false;
+            //is_ChattingUI=true;
+            //is_ContactInfoUI=false;
 
         } else if( className.equals( WIDGET_LISTVIEW)
                 && accessibilityEvent.getEventType()== AccessibilityEvent.TYPE_VIEW_SCROLLED){
@@ -196,8 +203,11 @@ public class WechatUtils {
         isFindNear = find_nearperson_view( rootNode, accessibilityEvent);
         //Log.i("WechatUtils", "是否找到[附近的人]按钮" + String.valueOf(isFindNear));
 
-        Boolean isFindTip = find_tipDialog(rootNode, accessibilityEvent);
+        find_tipDialog(rootNode, accessibilityEvent);
         //Log.i("WechatUtils", "是否找到提示弹出框" + String.valueOf(isFindTip));
+
+        //当出现 帐号被强制退出 弹出框
+        find_Account_ForceQuit_Dialog(rootNode);
 
     }
 
@@ -230,6 +240,7 @@ public class WechatUtils {
      * @return
      */
     boolean launcherUI(AccessibilityNodeInfo rootNode ,AccessibilityEvent accessibilityEvent ){
+        if( SayHiCache.isTaskFinished(currentSayhiData , accessibilityService) ) return false;
         isFindTab = find_discovery_tab(rootNode, accessibilityEvent);
         Log.i("WechatUtils", "是否找到[发现]Tab=" + String.valueOf(isFindTab));
         return isFindTab;
@@ -271,7 +282,7 @@ public class WechatUtils {
         if(rootNode==null)return false;
         String tab_discovery="发现";
         String className ="com.tencent.mm.ui.mogic.WxViewPager";
-        AccessibilityNodeInfo viewPagerNode = Utils.findNode( rootNode , className);
+        AccessibilityNodeInfo viewPagerNode = findNodeByClassName( rootNode , className);
         if( viewPagerNode == null){
             //Toast.makeText(accessibilityService.getApplicationContext(), "在界面中无法找到[发现]底部导航栏按钮",Toast.LENGTH_SHORT).show();
             return  false;
@@ -316,15 +327,15 @@ public class WechatUtils {
     boolean find_nearperson_view(AccessibilityNodeInfo rootNode , AccessibilityEvent event) {
         if(rootNode==null)return false;
         String className = "com.tencent.mm.ui.mogic.WxViewPager";
-        AccessibilityNodeInfo viewPagerNode = Utils.findNode(rootNode, className);
+        AccessibilityNodeInfo viewPagerNode = findNodeByClassName(rootNode, className);
         if (viewPagerNode == null) {
-            //Toast.makeText(accessibilityService.getApplicationContext(), "在界面中无法找到[附近的人]按钮", Toast.LENGTH_LONG).show();
             return false;
         }
-        //className="com.tencent.mm.ui.MMImageView";
         String string_NearPeron = "附近的人";
         List<AccessibilityNodeInfo> nodes = viewPagerNode.findAccessibilityNodeInfosByText(string_NearPeron);
         if (nodes == null || nodes.size() < 1) return false;
+
+        if( SayHiCache.isTaskFinished(currentSayhiData , accessibilityService) ) return false;
 
         AccessibilityNodeInfo nearPersonNode = nodes.get(0);
 
@@ -428,25 +439,6 @@ public class WechatUtils {
         backOperate(backViews);
     }
 
-//    private AccessibilityNodeInfo findViewByViewId(AccessibilityNodeInfo node, String viewId) {
-//        if (node == null) return null;
-//        List<AccessibilityNodeInfo> vs = node.findAccessibilityNodeInfosByViewId(viewId);
-//        if (vs != null && vs.size() > 0) return vs.get(0);
-//
-//        if (node.getChildCount() < 1) return null;
-//
-//        for (int i = 0; i < node.getChildCount(); i++) {
-//            AccessibilityNodeInfo child = node.getChild(i);
-//            AccessibilityNodeInfo view = findViewByViewId(child, viewId);
-//            if (view != null) {
-//                return view;
-//            }
-//        }
-//
-//        return null;
-//    }
-
-
     /***
      * 在附近的人列表界面，查看陌生人控件，触发点击事件
      * @param rootNode
@@ -458,7 +450,7 @@ public class WechatUtils {
         if(currentSayhiData==null) return false;
 
         String className ="android.widget.ListView";
-        AccessibilityNodeInfo listView = Utils.findNode( rootNode , className);
+        AccessibilityNodeInfo listView = findNodeByClassName( rootNode , className);
         if( listView ==null){
             return false;
         }
@@ -619,14 +611,22 @@ public class WechatUtils {
         List<AccessibilityNodeInfo> distanceViews = node.findAccessibilityNodeInfosByViewId(distanceViewId);
         List<AccessibilityNodeInfo> sayHiViews = node.findAccessibilityNodeInfosByViewId(sayHiViewId);
         List<AccessibilityNodeInfo> sendMessageViews = node.findAccessibilityNodeInfosByViewId(sendMessageViewId);
+        String className ="android.widget.ListView";
+
 
         if(titleViews==null || titleViews.size()<1){
-            LogUtils.log("在goto_ContactInfoUI()，标题控件没有找到");
+            //LogUtils.log("在goto_ContactInfoUI()，标题控件没有找到");
             return false;
         }
         String title = "详细资料";
         AccessibilityNodeInfo titleView = titleViews.get(0);
         if(!titleView.getText().toString().trim().equals( title )){
+            return false;
+        }
+
+        AccessibilityNodeInfo listView = findNodeByClassName( node , className);
+        if( listView ==null || listView.getChildCount()<1 ){
+            LogUtils.log("在goto_ContactInfoUI(),无法找到ListView控件");
             return false;
         }
 
@@ -645,8 +645,10 @@ public class WechatUtils {
             return false;
         }
 
-        if(  (sayHiViews == null || sayHiViews.size() <1) && ( sendMessageViews==null || sendMessageViews.size()<1) ){
-            LogUtils.log("在详情界面没有找到'打招呼'或'发送消息'按钮");
+        if(  (sayHiViews == null || sayHiViews.size() <1) && ( sendMessageViews==null || sendMessageViews.size()<1) ) {
+            if (!scrollListView(listView)) {
+                LogUtils.log("在详情界面没有找到'打招呼'或'发送消息'按钮");
+            }
             return false;
         }
 
@@ -704,17 +706,15 @@ public class WechatUtils {
             }
         }
 
-
-        String className ="android.widget.ListView";
-        AccessibilityNodeInfo listView = Utils.findNode( node , className);
-        if( listView ==null || listView.getChildCount()<1 ){
-            backOperate(backViews);
-            return false;
-        }
-
-        if(  scrollListView(listView)){
-            return false;
-        }
+//        String className ="android.widget.ListView";
+//        AccessibilityNodeInfo listView = findNodeByClassName( node , className);
+//        if( listView ==null || listView.getChildCount()<1 ){
+//            backOperate(backViews);
+//            return false;
+//        }
+//        if(  scrollListView(listView)){
+//            return false;
+//        }
 
         backOperate(backViews);
 
@@ -744,6 +744,12 @@ public class WechatUtils {
         if( !titleView.getText().toString().trim().equals("打招呼")){
             return;
         }
+
+        if( SayHiCache.isTaskFinished(currentSayhiData , accessibilityService) ){//判断是否需要关闭本页
+            backOperate(backViews);
+            return;
+        }
+
 
         if (editList == null || editList.size() < 1) {
             return;
@@ -830,6 +836,12 @@ public class WechatUtils {
             return;
         }
 
+        if( SayHiCache.isTaskFinished(currentSayhiData , accessibilityService) ){//判断是否需要关闭本页
+            backOperate(backViews);
+            return;
+        }
+
+
         currentNearPerson.setSayHello(true);
 
         LogUtils.log(currentNearPerson);
@@ -855,23 +867,6 @@ public class WechatUtils {
         }
     }
 
-    void setEditText(AccessibilityNodeInfo editText , String content){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
-            String txt = editText.getText()==null? "": editText.getText().toString().trim();
-            if( txt.equals(content) ) return;
-            Bundle arguments = new Bundle();
-            arguments.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, content );
-            editText.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, arguments);
-        }else{
-            String txt = editText.getText()==null?"": editText.getText().toString().trim();
-            if( txt.equals(content) ) return;
-            ClipboardManager clipboardManager = (ClipboardManager) accessibilityService.getSystemService(Context.CLIPBOARD_SERVICE);
-            ClipData clipData = ClipData.newPlainText("c2", content);
-            clipboardManager.setPrimaryClip(clipData);
-            editText.performAction(AccessibilityNodeInfo.ACTION_FOCUS);
-            editText.performAction(AccessibilityNodeInfo.ACTION_PASTE);
-        }
-    }
 
     void delayClick( final AccessibilityNodeInfo nodeInfo){
 
@@ -894,4 +889,23 @@ public class WechatUtils {
 
     }
 
+    /***
+     * 当进入 “微信帐号被其他设备登录提示框”时，
+     * 进行重新登录操作
+     * @param rootNode
+     */
+    void find_Account_ForceQuit_Dialog(AccessibilityNodeInfo rootNode){
+        if(rootNode==null) return;
+        String titleViewId =accessibilityService.getString(R.string.Account_ForceQuit_Dialog_title);
+        String okViewId = accessibilityService.getString(R.string.Account_ForceQuit_Dialog_ok);
+        List<AccessibilityNodeInfo> titleViews = rootNode.findAccessibilityNodeInfosByViewId(titleViewId);
+        if( titleViews==null || titleViews.size()<1) return;
+        List<AccessibilityNodeInfo> okViews = rootNode.findAccessibilityNodeInfosByViewId(okViewId);
+        if( okViews==null || okViews.size()<1) return;
+
+        String title = titleViews.get(0).getText().toString();
+        if( !title.equals("提示"))return;
+
+        performClick( okViews.get(0) );
+    }
 }

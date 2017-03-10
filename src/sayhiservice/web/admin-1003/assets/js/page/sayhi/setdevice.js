@@ -34,7 +34,7 @@
             {
                 width: '10%', field: '', title: '操作', align: 'center', formatter: function (value, row) {
                     var opt = "";// "<a href='javascript:alert(1);'>修改</a>";
-                    opt += "<a style='cursor:pointer;margin-left:20px' data-id='" + row["deviceid"] + "' class='js-hot-modelSelect'>选择</a>";
+                    opt += "<a style='cursor:pointer;margin-left:20px' data-id='" + row["deviceid"] + "' data-deviceno='"+ row['deviceno'] +"' class='js-hot-modelSelect'>选择</a>";
                     return opt;
                 }
             }
@@ -52,9 +52,22 @@
                 var deviceid = $(this).attr("data-id");//Html5可以使用$(this).data('id')方式来写;
 
                 var taskid = commonUtil.getQuery("taskid");
+
+              
                 //alert(taskid);
 
                 var indexdddd = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+                
+                //console.log( parent.Document. );
+
+
+                if (taskid.length == 0) {
+                    var deviceno = $(this).attr("data-deviceno");
+                    parent.$("#devicenoselect").val(deviceno);
+                    parent.layer.close(indexdddd); //再执行关闭    
+                    return;
+                }
+
                 
                 var layer = require("layer");
                 layer.confirm('您确定要设置该设备任务吗？', {
@@ -88,7 +101,7 @@
                                         break;
                                 }
                             }
-                        }
+                        }                        
                     });
                 });
             })

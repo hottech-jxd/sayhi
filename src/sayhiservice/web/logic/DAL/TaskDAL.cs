@@ -13,7 +13,7 @@ namespace logic.DAL
     {
         public int AddTask( TaskModel model )
         {
-            string strSql = string.Format("insert into sayhi_task(starttime,stoptime,sayhi,status,createtime,sayhirate,sayhimaxcount,remark) values(@starttime,@stoptime,@sayhi,@status,@createtime,@sayhirate,@sayhimaxcount,@remark);select @@IDENTITY");
+            string strSql = string.Format("insert into sayhi_task(starttime,stoptime,sayhi,status,createtime,sayhirate,sayhimaxcount,remark,wechatusername,wechatpwd,wechatloginmode,deviceno) values(@starttime,@stoptime,@sayhi,@status,@createtime,@sayhirate,@sayhimaxcount,@remark,@wechatusername,@wechatpwd,@wechatloginmode,@deviceno);select @@IDENTITY");
             SqlParameter[] parameters ={
                                            new SqlParameter("@starttime",model.starttime),
                                            new SqlParameter("@stoptime",model.stoptime),
@@ -23,6 +23,10 @@ namespace logic.DAL
                                            new SqlParameter("@sayhirate",model.sayhirate),
                                            new SqlParameter("@sayhimaxcount",model.sayhimaxcount),
                                            new SqlParameter("@remark",model.remark),
+                                           new SqlParameter("@wechatusername",model.wechatusername),
+                                           new SqlParameter("@wechatpwd",model.wechatpwd),
+                                           new SqlParameter("@wechatloginmode",model.wechatloginmode),
+                                           new SqlParameter("@deviceno",model.deviceno),
                                       };
 
             object obj = DbHelperSQL.GetSingle(strSql, parameters);
@@ -136,14 +140,17 @@ namespace logic.DAL
 
         public int UpdateTaskWithNoStatus(TaskModel model)
         {
-            string strSql = string.Format("update sayhi_task set starttime=@starttime , stoptime=@stoptime , sayhi=@sayhi , sayhirate=@sayhirate , sayhimaxcount=@sayhimaxcount, remark=@remark where taskid=@taskid");
+            string strSql = string.Format("update sayhi_task set starttime=@starttime , stoptime=@stoptime , sayhi=@sayhi , sayhirate=@sayhirate , sayhimaxcount=@sayhimaxcount, remark=@remark , wechatusername=@wechatusername ,wechatpwd =@wechatpwd ,wechatloginmode =@wechatloginmode where taskid=@taskid");
             SqlParameter[] parameters ={
                                            new SqlParameter("@starttime", model.starttime),
                                            new SqlParameter("@stoptime", model.stoptime),
                                            new SqlParameter("@sayhi", model.sayhi),
                                            new SqlParameter("@sayhirate",model.sayhirate),
                                            new SqlParameter("@sayhimaxcount",model.sayhimaxcount),
-                                           new SqlParameter("@remark",model.remark),
+                                           new SqlParameter("@remark",model.remark),                                          
+                                           new SqlParameter("@wechatusername",model.wechatusername),
+                                           new SqlParameter("@wechatpwd",model.wechatpwd),
+                                           new SqlParameter("@wechatloginmode",model.wechatloginmode),
                                            new SqlParameter("@taskid", model.taskid),
                                       };
 
@@ -154,7 +161,7 @@ namespace logic.DAL
 
         public int UpdateTaskWithStatus(TaskModel model)
         {
-            string strSql = string.Format("update sayhi_task set starttime=@starttime , stoptime=@stoptime , sayhi=@sayhi , sayhirate=@sayhirate , sayhimaxcount=@sayhimaxcount , remark=@remark , status=@status where taskid=@taskid");
+            string strSql = string.Format("update sayhi_task set starttime=@starttime , stoptime=@stoptime , sayhi=@sayhi , sayhirate=@sayhirate , sayhimaxcount=@sayhimaxcount , remark=@remark , status=@status , wechatusername=@wechatusername ,wechatpwd =@wechatpwd ,wechatloginmode =@wechatloginmode where taskid=@taskid");
             SqlParameter[] parameters ={
                                            new SqlParameter("@starttime", model.starttime),
                                            new SqlParameter("@stoptime", model.stoptime),
@@ -163,6 +170,9 @@ namespace logic.DAL
                                            new SqlParameter("@sayhimaxcount",model.sayhimaxcount),
                                            new SqlParameter("@remark", model.remark),
                                            new SqlParameter("@status", model.status),
+                                           new SqlParameter("@wechatusername",model.wechatusername),
+                                           new SqlParameter("@wechatpwd",model.wechatpwd),
+                                           new SqlParameter("@wechatloginmode",model.wechatloginmode),
                                            new SqlParameter("@taskid", model.taskid),
                                       };
 

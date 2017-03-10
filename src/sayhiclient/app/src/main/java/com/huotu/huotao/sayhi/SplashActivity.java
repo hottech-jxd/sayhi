@@ -1,5 +1,7 @@
 package com.huotu.huotao.sayhi;
 
+import android.accessibilityservice.AccessibilityServiceInfo;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -7,11 +9,13 @@ import android.os.PowerManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.accessibility.AccessibilityManager;
 
 import com.huotu.huotao.sayhi.bean.BaseBean;
 import com.huotu.huotao.sayhi.bean.SayHiBean;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -28,6 +32,9 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         initData();
+
+        checkAccessibilityServiceIsEnabled();
+
     }
 
     private void initData(){
@@ -70,6 +77,7 @@ public class SplashActivity extends AppCompatActivity {
                     SayHiCache.updateTaskLocationStatus( SplashActivity.this , currentConfig , "" );
                     return;
                 }
+                return;
             }
         }
 
@@ -168,6 +176,24 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
+    /***
+     * 检测微信打招呼插件是否启用
+     */
+    private boolean checkAccessibilityServiceIsEnabled(){
+        AccessibilityManager accessibilityManager = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
+        List<AccessibilityServiceInfo> accessibilityServices =
+                accessibilityManager.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_GENERIC);
 
+        String serviceName = SayHiToNearPersonService.class.getSimpleName();
+
+        for (AccessibilityServiceInfo info : accessibilityServices) {
+            if (info.getId().equals(getPackageName() + "/."+serviceName)) {
+                return true;
+            }
+        }
+
+        LogUtils.log("-------微信打招呼插件没有启动------");
+        return false;
+    }
 
 }

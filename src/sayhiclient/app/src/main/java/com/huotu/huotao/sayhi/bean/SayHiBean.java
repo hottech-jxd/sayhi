@@ -22,8 +22,14 @@ public class SayHiBean implements Serializable{
     private int taskid;
     //位置记录id
     private int locationid;
-    //标记当前任务的位置的操作状态是否上报成功。
+    //标记当前任务下的位置的操作状态是否上报成功。
     private boolean isReportStatusSuccess;
+    //微信登录方式:0：手机登录，1：其他方式登录
+    private String wechatloginmode;
+    //微信帐号
+    private String wechatusername;
+    //微信密码
+    private String wechatpwd;
 
     public String getLongitude() {
         return longitude;
@@ -95,5 +101,29 @@ public class SayHiBean implements Serializable{
 
     public void setReportStatusSuccess(boolean reportStatusSuccess) {
         isReportStatusSuccess = reportStatusSuccess;
+    }
+
+    public String getWechatloginmode() {
+        return wechatloginmode;
+    }
+
+    public void setWechatloginmode(String wechatloginmode) {
+        this.wechatloginmode = wechatloginmode;
+    }
+
+    public String getWechatusername() {
+        return wechatusername;
+    }
+
+    public void setWechatusername(String wechatusername) {
+        this.wechatusername = wechatusername;
+    }
+
+    public String getWechatpwd() {
+        return wechatpwd;
+    }
+
+    public void setWechatpwd(String wechatpwd) {
+        this.wechatpwd = wechatpwd;
     }
 }

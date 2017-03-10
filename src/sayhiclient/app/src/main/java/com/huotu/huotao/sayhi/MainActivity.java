@@ -1,5 +1,7 @@
 package com.huotu.huotao.sayhi;
 
+import android.accessibilityservice.AccessibilityServiceInfo;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -8,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.accessibility.AccessibilityManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -20,6 +23,7 @@ import com.huotu.huotao.sayhi.bean.TaskResultBeam;
 import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.Call;
@@ -178,6 +182,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }else if(view.getId()==R.id.btnTest){
 
+
+            checkAccessibilityServiceIsEnabled();
              //testService();
 
             //SettingsHelper t = new SettingsHelper(BuildConfig.APPLICATION_ID);
@@ -328,5 +334,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //
 //    }
 //
+
+
+    private boolean checkAccessibilityServiceIsEnabled(){
+        AccessibilityManager accessibilityManager = (AccessibilityManager) getSystemService(Context.ACCESSIBILITY_SERVICE);
+        List<AccessibilityServiceInfo> accessibilityServices =
+                accessibilityManager.getEnabledAccessibilityServiceList(AccessibilityServiceInfo.FEEDBACK_GENERIC);
+
+        String serviceName = SayHiToNearPersonService.class.getSimpleName();
+
+        for (AccessibilityServiceInfo info : accessibilityServices) {
+            if (info.getId().equals(getPackageName() + "/."+ serviceName)) {
+                return true;
+            }
+        }
+
+        LogUtils.log("-------微信打招呼插件没有启动------");
+        return false;
+    }
 
 }

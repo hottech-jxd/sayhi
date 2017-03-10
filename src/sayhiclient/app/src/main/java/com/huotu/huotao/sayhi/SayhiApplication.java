@@ -12,17 +12,15 @@ import com.squareup.leakcanary.LeakCanary;
 /**
  * Created by Administrator on 2017/2/23.
  */
-
 public class SayhiApplication extends Application {
     public static String TAG = SayhiApplication.class.getName();
     static SayhiApplication instance;
-
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        this.instance = this;
+        instance = this;
 
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
@@ -42,26 +40,27 @@ public class SayhiApplication extends Application {
         try {
             version = instance.getPackageManager().getPackageInfo(instance.getPackageName(), 0).versionName;
         } catch (PackageManager.NameNotFoundException e) {
-            Log.e( TAG , e.getMessage()==null? " SayHiApplication.getAppVersion Error" : e.getMessage());
+            Log.e(TAG, e.getMessage() == null ? " SayHiApplication.getAppVersion Error" : e.getMessage());
         }
         return version;
     }
 
-    public static DeviceBean getDeviceInfo(){
+    public static DeviceBean getDeviceInfo() {
         DeviceBean bean = new DeviceBean();
 
-        bean.setDevicetype(  Build.MODEL);
-        bean.setOsversion( Build.VERSION.RELEASE );
-        bean.setDevicename( Build.DEVICE );
-        bean.setBrand( Build.BRAND );
+        bean.setDevicetype(Build.MODEL);
+        bean.setOsversion(Build.VERSION.RELEASE);
+        bean.setDevicename(Build.DEVICE);
+        bean.setBrand(Build.BRAND);
 
         TelephonyManager telephonyManager = (TelephonyManager) instance.getSystemService(TELEPHONY_SERVICE);
 
 
-        bean.setDeviceno( telephonyManager.getDeviceId());
+        bean.setDeviceno(telephonyManager.getDeviceId());
 
-        bean.setDevicename( bean.getBrand() + bean.getDevicetype() );
+        bean.setDevicename(bean.getBrand() + bean.getDevicetype());
 
         return bean;
     }
+
 }

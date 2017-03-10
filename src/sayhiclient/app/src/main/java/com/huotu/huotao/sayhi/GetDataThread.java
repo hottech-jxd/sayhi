@@ -176,6 +176,9 @@ public class GetDataThread  extends Thread {
         sayHiBean.setStatus( resultBeam.getData().getLocations().get(0).getStatus() );
         sayHiBean.setLocationid( resultBeam.getData().getLocations().get(0).getLocationid() );
         sayHiBean.setTaskid( resultBeam.getData().getTaskid());
+        sayHiBean.setWechatloginmode(resultBeam.getData().getWechatloginmode());
+        sayHiBean.setWechatpwd(resultBeam.getData().getWechatpwd());
+        sayHiBean.setWechatusername( resultBeam.getData().getWechatusername());
 
         startApp(sayHiBean);
     }

@@ -23,6 +23,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../bameng/src/Android_bameng/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../bameng/src/Android_bameng/app/src/main/java/com/bameng/adapter/StoreAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../bameng/src/Android_bameng/app/src/main/res/layout/article_item.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/build.gradle">
           <value>
             <set />
@@ -78,12 +98,62 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/gradle/wrapper/gradle-wrapper.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/res/values/styles.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/BaseApplication.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/config/Constants.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/image/FrescoUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/image/IDownloadResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/image/ImageFileUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/ui/HomeActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/ui/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/utils/GsonRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/widgets/CustomDialog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../huobanmall/src/buyer/sis/src/com/huotu/partnermall/widgets/SharePopupWindow.java">
           <value>
             <set />
           </value>
@@ -109,6 +179,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/AccessiblityBase.java">
           <value>
             <set />
           </value>
@@ -234,6 +309,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/Utils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/huotu/huotao/sayhi/WechatLoginUtils.java">
           <value>
             <set />
           </value>
@@ -434,6 +514,46 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/../../../kuaiduobao/src/kdb/Android_kuaiduobao/raiders/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/java/com/jxd/testthreeshare/ImageFileUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/java/com/jxd/testthreeshare/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/java/com/jxd/testthreeshare/fffff.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/java/com/jxd/testthreeshare/ttt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../study/TestShare/app/src/main/res/values/strings.xml">
           <value>
             <set />
           </value>

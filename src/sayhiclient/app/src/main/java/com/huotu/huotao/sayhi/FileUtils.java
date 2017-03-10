@@ -12,11 +12,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
-
-import android.text.TextUtils;
-
 import de.robv.android.xposed.XposedBridge;
-
 import static android.text.TextUtils.isEmpty;
 
 /**

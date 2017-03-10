@@ -9,16 +9,19 @@ import java.util.List;
  * Created by Administrator on 2017/2/25.
  */
 
-public class TaskBean  implements Serializable{
+public class TaskBean  implements Serializable {
     private int taskid;
     private String starttime;
-    private String endtime;
+    private String stoptime;
     private int status;
     private String sayhi;
     private String deviceno;
     private String createtime;
     private int sayhirate;
-    private  int sayhimaxcount;
+    private int sayhimaxcount;
+    private String wechatusername;
+    private String wechatpwd;
+    private String wechatloginmode;
     private List<LocationBean> locations;
 
     public int getTaskid() {
@@ -37,12 +40,12 @@ public class TaskBean  implements Serializable{
         this.starttime = starttime;
     }
 
-    public String getEndtime() {
-        return endtime;
+    public String getStoptime() {
+        return stoptime;
     }
 
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setStoptime(String stoptime) {
+        this.stoptime = stoptime;
     }
 
     public int getStatus() {
@@ -99,5 +102,29 @@ public class TaskBean  implements Serializable{
 
     public void setSayhimaxcount(int sayhimaxcount) {
         this.sayhimaxcount = sayhimaxcount;
+    }
+
+    public String getWechatusername() {
+        return wechatusername;
+    }
+
+    public void setWechatusername(String wechatusername) {
+        this.wechatusername = wechatusername;
+    }
+
+    public String getWechatpwd() {
+        return wechatpwd;
+    }
+
+    public void setWechatpwd(String wechatpwd) {
+        this.wechatpwd = wechatpwd;
+    }
+
+    public String getWechatloginmode() {
+        return wechatloginmode;
+    }
+
+    public void setWechatloginmode(String wechatloginmode) {
+        this.wechatloginmode = wechatloginmode;
     }
 }

@@ -16,17 +16,16 @@ public class SayHiBroadcastReceiver extends BroadcastReceiver {
         if(context==null)return;
         if(intent==null)return;
         if(!intent.hasExtra("data"))return;
-        SayHiBean bean = (SayHiBean) intent.getSerializableExtra("data");
+//        SayHiBean bean = (SayHiBean) intent.getSerializableExtra("data");
 //        double lon = bundle.getDouble("longitude");
 //        double lat = bundle.getDouble("latitude");
 //        String content = bundle.getString("content");
-
-        PackageManager packageManager = context.getPackageManager();
-        // 获取启动微信的intent
-        Intent wechatIntent = packageManager.getLaunchIntentForPackage( Constants.WECHAT_APP_PACKAGENAME );
-        //每次启动微信应用时，但是以重新启动应用的形式打开
-        wechatIntent.setFlags( Intent.FLAG_ACTIVITY_NEW_TASK );
-        //跳转
-        context.startActivity(wechatIntent);
+//        PackageManager packageManager = context.getPackageManager();
+//        // 获取启动微信的intent
+//        Intent wechatIntent = packageManager.getLaunchIntentForPackage( Constants.WECHAT_APP_PACKAGENAME );
+//        //每次启动微信应用时，但是以重新启动应用的形式打开
+//        wechatIntent.setFlags( Intent.FLAG_ACTIVITY_NEW_TASK );
+//        //跳转
+//        context.startActivity(wechatIntent);
     }
 }

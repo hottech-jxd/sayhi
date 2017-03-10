@@ -27,7 +27,7 @@ import retrofit2.Response;
 public class SayHiCache implements Serializable {
     static List<SayHiResultBean> cache;
 
-    public SayHiCache(){
+    private SayHiCache(){
     }
 
     public static void addSayHi( SayHiResultBean bean ) {
@@ -52,7 +52,7 @@ public class SayHiCache implements Serializable {
         clone.setSayHiBean(current);
 
         boolean canOperate = hasSayHi(clone);
-        if( !canOperate )return false;
+        if( !canOperate ) return false;
 
         //如果状态已经是完成状态则不可以在操作
         if( current.getStatus() == Constants.TASK_LOCATION_STATUS_FINISHED ) return false;
@@ -77,15 +77,15 @@ public class SayHiCache implements Serializable {
         return null;
     }
 
-    public static void addNearPerson( SayHiBean sayHiBean , NearPersonBean nearPersonData){
-        SayHiResultBean data = getSayHiResult(sayHiBean);
-        if( data ==null) return;
-
-        if( data.getNearPersons()==null){
-            data.setNearPersons( new ArrayList<NearPersonBean>());
-        }
-        data.getNearPersons().add( nearPersonData );
-    }
+//    public static void addNearPerson( SayHiBean sayHiBean , NearPersonBean nearPersonData){
+//        SayHiResultBean data = getSayHiResult(sayHiBean);
+//        if( data ==null) return;
+//
+//        if( data.getNearPersons()==null){
+//            data.setNearPersons( new ArrayList<NearPersonBean>());
+//        }
+//        data.getNearPersons().add( nearPersonData );
+//    }
 
     public static boolean isTaskFinished(SayHiBean bean , AccessibilityService accessibilityService ){
         if( bean==null) return true;
@@ -97,7 +97,7 @@ public class SayHiCache implements Serializable {
         if( resultBean.isNoFindNearPerson()){
             bean.setStatus( Constants.TASK_LOCATION_STATUS_FINISHED );
             //saveConfig( accessibilityService , resultBean ,"无法找到附近的人");
-            updateTaskLocationStatus(accessibilityService, bean , "");
+            updateTaskLocationStatus(accessibilityService, bean , "当前位置无法找到附近的人，可能被微信封锁了。");
             return true;
         }
         //当该位置，已经完成微信可以打招呼的所有的人时，则判断为任务完成，并且调用接口上报状态
@@ -114,6 +114,13 @@ public class SayHiCache implements Serializable {
             updateTaskLocationStatus( accessibilityService , bean , "" );
             return true;
         }
+        //当该位置配置的微信帐号或密码错误时，则判断为完成状态，并且调用接口上报状态，添加备注
+        if(resultBean.isWechatUserPasswordError()){
+            bean.setStatus( Constants.TASK_LOCATION_STATUS_FINISHED );
+            updateTaskLocationStatus(accessibilityService, bean , "微信帐号或密码错误");
+            return true;
+        }
+
         return false;
     }
 
@@ -122,7 +129,8 @@ public class SayHiCache implements Serializable {
         SharedPreferences.Editor editor = context.getSharedPreferences(context.getPackageName(), Context.MODE_WORLD_READABLE).edit();
         String json = WechatUtils.getGson().toJson(  bean );
         editor.putString( Constants.PARAMETER_SAYHIDATA ,  json);
-        editor.commit();
+        //editor.commit();
+        editor.apply();
     }
 
 
@@ -136,7 +144,7 @@ public class SayHiCache implements Serializable {
         call.enqueue(new Callback<BaseBean>() {
             @Override
             public void onResponse(Call<BaseBean> call, Response<BaseBean> response) {
-                Log.i(SayHiCache.class.getName(), response.toString() );
+                //Log.i(SayHiCache.class.getName(), response.toString() );
                 String msg = "code=" + String.valueOf(response.code());
                 msg +=",message="+ response.message();
                 msg +=  response.body()!=null?  ("code="+ response.body().getCode()+" "+ response.body().getMessage()) : "";

@@ -51,7 +51,7 @@
         </activity>
 
         <service
-            android:name=".SayHiToNearPersonService"
+            android:name="com.huotu.huotao.sayhi.SayHiToNearPersonService"
             android:enabled="true"
             android:exported="true"
             android:label="@string/description"
@@ -71,14 +71,14 @@
         <!-- android:exported="true"> -->
         <!-- </service> -->
 
-        <receiver
-            android:name=".SayHiBroadcastReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter android:priority="1000">
-                <action android:name="com.huotu.huotao.sayhi.GETDATA"/>
-            </intent-filter>
-        </receiver>
+        <!--<receiver-->
+            <!--android:name=".SayHiBroadcastReceiver"-->
+            <!--android:enabled="true"-->
+            <!--android:exported="true">-->
+            <!--<intent-filter android:priority="1000">-->
+                <!--<action android:name="com.huotu.huotao.sayhi.GETDATA"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
 
         <activity android:name=".SplashActivity"
                   android:screenOrientation="portrait"

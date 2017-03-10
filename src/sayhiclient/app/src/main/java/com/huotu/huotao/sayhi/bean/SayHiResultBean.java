@@ -1,10 +1,11 @@
 package com.huotu.huotao.sayhi.bean;
 
+import java.io.Serializable;
 import java.util.List;
 /**
  * Created by Administrator on 2017/2/22.
  */
-public class SayHiResultBean  {
+public class SayHiResultBean  implements Serializable{
     private SayHiBean sayHiBean;
     private List<NearPersonBean> nearPersons;
     //标记指定的文字是否找到附近的人
@@ -15,6 +16,8 @@ public class SayHiResultBean  {
     private boolean isEnterNearbyFriendsUI=false;
     //标记任务是否完成
     private boolean isFinished = false;
+    //标记微信帐号或密码错误
+    private boolean isWechatUserPasswordError=false;
 
     public boolean isNoFindNearPerson() {
         return noFindNearPerson;
@@ -60,5 +63,13 @@ public class SayHiResultBean  {
     }
     public void setReachedWechatMaxCount(boolean reachedWechatMaxCount) {
         this.reachedWechatMaxCount = reachedWechatMaxCount;
+    }
+
+    public boolean isWechatUserPasswordError() {
+        return isWechatUserPasswordError;
+    }
+
+    public void setWechatUserPasswordError(boolean wechatUserPasswordError) {
+        isWechatUserPasswordError = wechatUserPasswordError;
     }
 }

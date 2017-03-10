@@ -25,6 +25,12 @@ namespace logic.Model
         public List<LocationModel> locations { get; set; }
 
         public DeviceModel device { get; set; }
+
+        public string wechatusername { get; set; }
+
+        public string wechatpwd { get; set; }
+
+        public string wechatloginmode { get; set; }
     }
 
     public class TaskWhere

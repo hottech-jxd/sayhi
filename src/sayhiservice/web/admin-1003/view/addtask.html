@@ -42,24 +42,30 @@
             <h3>新增任务</h3>
         </div>
     <br />
-        <div>
+        <div style="margin-bottom:15px;">
             <label>任务运行时间:</label><input readonly="readonly" style="margin-left:12px;line-height:30px;height:30px" id="starttime" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" />---<input readonly="readonly" style="margin-left:5px;line-height:30px;height:30px" id="stoptime" type="text" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss' })" />            
 
             <label style="margin-left:10px">打招呼频率(单位:秒)</label><input style="margin-left:10px;height:30px;width:80px;" name="sayhirate" id="sayhirate" type="text" value="10" />
 
             <label style="margin-left:10px">最大打招呼的人数</label><input type="text" style="margin-left:10px;height:30px" name="sayhimaxcount" id="sayhimaxcount" value="10" />
         </div>
-    <br />
-        <div>
+    
+    <div style="margin-bottom:15px;">
+        <label>微信登录方式:</label><select id="wechatloginmode" style="margin-left:12px;height:30px;"><option value="1">微信号/QQ登录</option><option value="0">手机登录</option></select>
+        <label style="margin-left:10px;">微信登录帐号</label><input type="text" style="margin-left:10px;height:30px" name="wechatusername" id="wechatusername" />
+        <label style="margin-left:10px;">微信登录密码</label><input type="text" style="margin-left:10px;height:30px" name="wechatpwd" id="wechatpwd" />
+        <label style="margin-left:10px;">设置设备</label> <input placeholder="点击选择设备" readonly="readonly" type="text" style="cursor:pointer;margin-left:10px;height:30px" name="devicenoselect" id="devicenoselect" />
+    </div>    
+        <div style="margin-bottom:15px;">
             <label>打招呼的内容:</label>            
-            <textarea id="content" style="width:60%;height:100px; margin:10px;" ></textarea>
+            <textarea id="content" style="width:60%;height:80px; margin-left:10px;" ></textarea>
         </div>
-    <br />
-        <div>
-            <label>任务描述说明:</label>
-            <input id="remark" name="remark" type="text" style="margin-left:10px;height:30px;width:60%;" />         
-        </div>
-    <br />
+   
+    <div style="margin-bottom:15px;">
+        <label>任务描述说明:</label>
+        <input id="remark" name="remark" type="text" style="margin-left:10px;height:30px;width:60%;" />
+    </div>
+   
     <div>
         <label>输入搜索地址:</label>
         <input style="margin-left:10px;line-height:30px;height:30px;width:50%" id="suggestId" type="text" placeholder="输入地址可以进行搜索" />

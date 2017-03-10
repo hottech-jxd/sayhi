@@ -22,6 +22,8 @@ import static java.lang.System.currentTimeMillis;
 public class SayHiToNearPersonService extends AccessibilityService implements SharedPreferences.OnSharedPreferenceChangeListener{
     static WechatUtils wechatUtils;
 
+    static WechatLoginUtils wechatLoginUtils;
+
     SharedPreferences sharedPreferences;
 
     SayHiBean sayHiBean;
@@ -43,6 +45,10 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
                 wechatUtils = new WechatUtils(this);
             }
 
+            if(wechatLoginUtils==null){
+                wechatLoginUtils=new WechatLoginUtils(this);
+            }
+
             sharedPreferences = this.getSharedPreferences(this.getPackageName(), MODE_WORLD_READABLE);
             sharedPreferences.registerOnSharedPreferenceChangeListener(this);
             try {
@@ -54,6 +60,9 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
             }
 
             wechatUtils.setCurrentSayhiData(sayHiBean);
+
+            wechatLoginUtils.setCurrentSayhiData(sayHiBean);
+
 
             String currentDate = Utils.formatDate(System.currentTimeMillis());
             LogUtils.log("-----------" + currentDate + "微信打招呼插件连接了------------");
@@ -71,24 +80,24 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
             if ( rootNode == null) return;
             if(sayHiBean==null){
                 LogUtils.log("提供的打招呼的信息为空,无法进行打招呼操作");
-                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
+                //this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if ( sayHiBean.getMaxCount() < 1) {
                 LogUtils.log( "可以打招呼的最大人数是0，因此无需打招呼");
-                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
+                //this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if ( sayHiBean.getContent() == null || sayHiBean.getContent().isEmpty()) {
                 LogUtils.log("打招呼的内容是空，无需打招呼");
-                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
+                //this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
                 return;
             }
             if( sayHiBean.getStatus() == Constants.TASK_LOCATION_STATUS_FINISHED ){
                 String json = WechatUtils.getGson().toJson(sayHiBean);
                 LogUtils.log("当前位置的打招呼操作已经完成!位置信息"+ json );
-                this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
-                return;
+                //this.performGlobalAction(AccessibilityService.GLOBAL_ACTION_BACK);
+                //return;
             }
 
             Log.i(SayHiToNearPersonService.class.getName(),
@@ -108,7 +117,13 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
                 case AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED:
                 case AccessibilityEvent.TYPE_VIEW_FOCUSED:
                 case AccessibilityEvent.TYPE_VIEW_SCROLLED:
+
+                    wechatLoginUtils.login( rootNode , accessibilityEvent );
+
                     wechatUtils.sayHi( rootNode , accessibilityEvent);
+
+                    wechatLoginUtils.loginout( rootNode , accessibilityEvent);
+
                     break;
                 default:
                     break;
@@ -141,6 +156,8 @@ public class SayHiToNearPersonService extends AccessibilityService implements Sh
                     sayHiBean = null;
                 }
                 wechatUtils.setCurrentSayhiData(sayHiBean);
+
+                wechatLoginUtils.setCurrentSayhiData(sayHiBean);
             }
         } catch (Exception ex) {
             LogUtils.log( ex );

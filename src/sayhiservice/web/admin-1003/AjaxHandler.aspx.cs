@@ -369,6 +369,26 @@ namespace admin
                 return;
             }
 
+            if (string.IsNullOrEmpty(model.wechatusername))
+            {
+                result.code = Constants.ERROR_CODE;
+                result.message = "微信帐号空";
+                this.code = result.code;
+                this.message = result.message;
+                this.Data["data"] = result;
+                return;
+            }
+
+            if (string.IsNullOrEmpty(model.wechatpwd))
+            {
+                result.code = Constants.ERROR_CODE;
+                result.message = "微信密码空";
+                this.code = result.code;
+                this.message = result.message;
+                this.Data["data"] = result;
+                return;
+            }
+
 
            result = TaskService.Instance.AddTaskInfo(model);
 
@@ -571,6 +591,27 @@ namespace admin
             {
                 result.code = Constants.ERROR_CODE;
                 result.message = "结束时间不能小于开始时间";
+                this.code = result.code;
+                this.message = result.message;
+                this.Data["data"] = result;
+                return;
+            }
+
+
+            if (string.IsNullOrEmpty(model.wechatusername))
+            {
+                result.code = Constants.ERROR_CODE;
+                result.message = "微信帐号空";
+                this.code = result.code;
+                this.message = result.message;
+                this.Data["data"] = result;
+                return;
+            }
+
+            if (string.IsNullOrEmpty(model.wechatpwd))
+            {
+                result.code = Constants.ERROR_CODE;
+                result.message = "微信密码空";
                 this.code = result.code;
                 this.message = result.message;
                 this.Data["data"] = result;

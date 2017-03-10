@@ -227,40 +227,56 @@ define(function (require, exports, module) {
         var sayhimaxcount = $("#sayhimaxcount").val();
         var content = $("#content").val();
         var remark = $("#remark").val();
+        var deviceno = $("#devicenoselect").val();
+
+        var wechatloginmode = $("#wechatloginmode").val();
+        var wechatusername = $("#wechatusername").val();
+        var wechatpwd = $("#wechatpwd").val();
+
 
         var obj = $(".js-hot-modelrecord");
         var layer = require("layer");
 
         if (starttime.length == 0) {
-            layer.alert("请选择开始时间");
+            layer.msg("请选择开始时间");
             return;
         }
         if (stoptime.length == 0) {
-            alert.alert("请选择结束时间");
+            alert.msg("请选择结束时间");
             return;
         }
         if (sayhirate.length == 0) {
-            layer.alert("请输入打招呼的频率");
+            layer.msg("请输入打招呼的频率");
             return;
         }
         if (sayhimaxcount.length == 0) {
-            layer.alert("请输入人数");
+            layer.msg("请输入人数");
             return;
         }
 
         if (isNaN(sayhirate)) {
-            layer.alert("请输入正确的频率数字");
+            layer.msg("请输入正确的频率数字");
             return;
         }
 
         if (isNaN(sayhimaxcount)) {
-            layer.alert("请输入正确的人数");
+            layer.msg("请输入正确的人数");
             return;
         }
 
 
         if (content.length == 0) {
-            layer.alert("请输入打招呼内容");
+            layer.msg("请输入打招呼内容");
+            return;
+        }
+
+        if (wechatusername.length == 0) {
+            layer.msg("请输入微信帐号");
+            return;
+        }
+
+        if (wechatpwd.length == 0) {
+            layer.msg("请输入微信密码");
             return;
         }
 
@@ -272,7 +288,11 @@ define(function (require, exports, module) {
             sayhi: content,
             sayhirate: sayhirate,
             sayhimaxcount: sayhimaxcount,
-            remark:remark,
+            remark: remark,
+            wechatusername: wechatusername,
+            wechatpwd: wechatpwd,
+            wechatloginmode: wechatloginmode,
+            deviceno:deviceno,
             locations: []
         }
 
@@ -404,6 +424,9 @@ define(function (require, exports, module) {
         var sayhimaxcount = $("#sayhimaxcount");
         var remark = $("#remark");
         var status = $("#taskstatus");
+        var wechatloginmode = $("#wechatloginmode");
+        var wechatusername = $("#wechatusername");
+        var wechatpwd = $("#wechatpwd");
 
         var deviceno = $("#deviceno");
         var osversion = $("#osversion");
@@ -439,6 +462,9 @@ define(function (require, exports, module) {
                     sayhirate.val(data.data.data.sayhirate);
                     sayhimaxcount.val(data.data.data.sayhimaxcount);
                     remark.val(data.data.data.remark);
+                    wechatloginmode.val(data.data.data.wechatloginmode);
+                    wechatusername.val(data.data.data.wechatusername);
+                    wechatpwd.val(data.data.data.wechatpwd);
 
                     if (data.data.data.status == 0) {
                         status.html("未开始");
@@ -466,6 +492,10 @@ define(function (require, exports, module) {
                         divDevice.show();
                     }
 
+
+                    locationDiv.empty();
+
+
                     if (data.data.data.locations.length != 0) {
                                            
 
@@ -480,7 +510,10 @@ define(function (require, exports, module) {
                             var _p = "<p style='height:20px;cursor:pointer;' class='js-hot-modelrecord' data-point-lat=" + loc.latitude + " data-point-lng=" + loc.longitude + " data-point-add=" + loc.address + ">" + loc.address;
                             
                             if (loc.status != 0) {
-                                _p += "<label style='margin-left:10px' class='txt-green-b'>已完成</label> </p>";
+                                _p += "<label style='margin-left:10px' class='txt-green-b'>已完成</label>";
+                                if (loc.remark.length >= 1) {
+                                    _p += "<label style='margin-left:10px;' class='txt-red-b'>"+loc.remark+"</label></p>";
+                                }
                             } else {
                                 _p +="<a class='js-hot-modelDelete' >删除</a> </p>";
                             }
@@ -541,7 +574,8 @@ define(function (require, exports, module) {
                     switch (code) {
                         case 200:
                             layer.msg("修改成功", { time: 2000 });
-                            window.location.href = "/view/tasklist.html";
+                            //window.location.href = "/view/tasklist.html";
+                            initTaskInfo();
                             break;
                         case 500:
                             layer.msg(data.message, { time: 2000 });
@@ -618,5 +652,30 @@ define(function (require, exports, module) {
 
 
     }
+
+
+    $("#devicenoselect").click(function () {
+
+        var layer = require("layer");
+        layer.open({
+            type: 2,
+            title: '设备列表',
+            area: ['600px', '400px'],
+            shade: 0,
+            content: '../../../view/setdevice.html?taskid=',
+            btn: ['关闭'],
+            yes: function (index, dom) {
+
+                console.log(dom);
+
+                layer.closeAll();
+            },
+            cancel: function (data) {
+            }
+        });
+
+    })
+
+
 
 });

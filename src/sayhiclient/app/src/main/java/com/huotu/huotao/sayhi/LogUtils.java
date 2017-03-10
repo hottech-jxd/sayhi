@@ -61,7 +61,6 @@ public class LogUtils {
     public static void log( String message , StackTraceElement[] items ){
         if(!BuildConfig.ISDEBUG)return;
 
-        //StackTraceElement[] items =  ex.getStackTrace();
         if( items==null|| items.length<1) return;
         int count = items.length;
         String error = message!=null? "" : message;
@@ -71,7 +70,7 @@ public class LogUtils {
             }
              error += items[i].toString();
         }
-        String fileName = Utils.formatDate( System.currentTimeMillis())+"-module";
+        String fileName = Utils.formatDate( System.currentTimeMillis() , Utils.DATE_FORMAT )+"-module";
         log(error , fileName);
     }
 

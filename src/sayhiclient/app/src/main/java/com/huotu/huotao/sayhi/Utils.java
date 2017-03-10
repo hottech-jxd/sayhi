@@ -39,44 +39,28 @@ public class Utils {
         return null;
     }
 
-    /***
-     *
-     * @param list
-     * @param position
-     * @return
-     */
-//    public static NearPersonData findDataByPostion(List<NearPersonData> list , Rect position){
-//        if(list==null) return null;
-//        for(NearPersonData item :list){
-//            if( item.getPosition().contains( position )){
-//                return item;
-//            }
+//    /***
+//     *
+//     * @param node
+//     * @param className
+//     * @return
+//     */
+//    public static AccessibilityNodeInfo findNode(AccessibilityNodeInfo node , String className){
+//        if( node ==null) return null;
+//        String nodeClassName = node.getClassName().toString();
+//        if( nodeClassName.equals( className ) ){
+//            return node;
+//        }
+//        int count = node.getChildCount();
+//        if( count==0) return null;
+//        for(int i=0;i<count;i++){
+//            AccessibilityNodeInfo item = node.getChild(i);
+//            AccessibilityNodeInfo find = findNode( item , className);
+//            if( find == null ) continue;
+//            return  find;
 //        }
 //        return null;
 //    }
-
-    /***
-     *
-     * @param node
-     * @param className
-     * @return
-     */
-    public static AccessibilityNodeInfo findNode(AccessibilityNodeInfo node , String className){
-        if( node ==null) return null;
-        String nodeClassName = node.getClassName().toString();
-        if( nodeClassName.equals( className ) ){
-            return node;
-        }
-        int count = node.getChildCount();
-        if( count==0) return null;
-        for(int i=0;i<count;i++){
-            AccessibilityNodeInfo item = node.getChild(i);
-            AccessibilityNodeInfo find = findNode( item , className);
-            if( find == null ) continue;
-            return  find;
-        }
-        return null;
-    }
 
     public static String formatDate(Long currentTime){
         return formatDate( currentTime , TIME_FORMAT);

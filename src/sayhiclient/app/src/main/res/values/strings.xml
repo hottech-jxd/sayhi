@@ -33,5 +33,49 @@
 
     <integer name="sayHi_count">20</integer>
 
+    <string name="LoginHistoryUI_image">com.tencent.mm:id/bbx</string>
+    <string name="LoginHistoryUI_username">com.tencent.mm:id/bbr</string>
+    <string name="LoginHistoryUI_password">com.tencent.mm:id/bbs</string>
+    <string name="LoginHistoryUI_login">com.tencent.mm:id/bbt</string>
+    <string name="LoginHistoryUI_forget">com.tencent.mm:id/bbu</string>
+    <string name="LoginHistoryUI_more">com.tencent.mm:id/bcb</string>
+
+    <string name="LauncherUI_login">com.tencent.mm:id/cbi</string>
+    <string name="LauncherUI_register">com.tencent.mm:id/cbh</string>
+    
+    <string name="MobileInputUI_title">android:id/text1</string>
+    <string name="MobileInputUI_mobile">com.tencent.mm:id/bq6</string>
+    <string name="MobileInputUI_password">com.tencent.mm:id/gr</string>
+    <string name="MobileInputUI_login">com.tencent.mm:id/aae</string>
+    <string name="MobileInputUI_otherlogin">com.tencent.mm:id/bcg</string>
+
+    <string name="LauncherUI_OtherLogin_back">com.tencent.mm:id/gw</string>
+    <string name="LauncherUI_OtherLogin_title">android:id/text1</string>
+    <string name="LauncherUI_OtherLogin_layusername">com.tencent.mm:id/bbr</string>
+    <string name="LauncherUI_OtherLogin_username">com.tencent.mm:id/gr</string>
+    <string name="LauncherUI_OtherLogin_laypassword">com.tencent.mm:id/bbs</string>
+    <string name="LauncherUI_OtherLogin_password">com.tencent.mm:id/gr</string>
+    <string name="LauncherUI_OtherLogin_login">com.tencent.mm:id/bbt</string>
+
+    <string name="LauncherUI_TAB_Item">com.tencent.mm:id/bpx</string>
+    <string name="LauncherUI_TAB_item_name">com.tencent.mm:id/bq0</string>
+
+
+    <string name="SettingUI_title">android:id/text1</string>
+    <string name="back">com.tencent.mm:id/gw</string>
+    <string name="SettingUI_Quit_Dialog_quit">com.tencent.mm:id/abg</string>
+    <string name="SettingUI_Quit_Dialog_cancel">com.tencent.mm:id/abf</string>
+
+    <string name="MeTabUI_username">com.tencent.mm:id/bqk</string>
+    
+    <string name="Switch_Dialog_listview">com.tencent.mm:id/akv</string>
+    <string name="Switch_Dialog_listview_item">com.tencent.mm:id/fa</string>
+
+
+    <string name="Login_Error_Dialog_message">com.tencent.mm:id/bpn</string>
+    <string name="Login_Error_Dialog_ok">com.tencent.mm:id/abg</string>
+
+    <string name="Account_ForceQuit_Dialog_title">com.tencent.mm:id/bpj</string>
+    <string name="Account_ForceQuit_Dialog_ok">com.tencent.mm:id/abg</string>
 
 </resources>

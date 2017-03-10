@@ -11,8 +11,7 @@
     <script src="../assets/seajs/sea.js" type="text/javascript"></script>
     <script src="../assets/seajs/config.js" type="text/javascript"></script>
     <script src="http://api.map.baidu.com/api?v=2.0&ak=zwqlQlRhdFmoVCcd0as86d46ceNbya1e" type="text/javascript"></script>
-    <!--<script src="../assets/libs/jquery.area.js" type="text/javascript"></script>-->
-
+    
     <style>
         p {
             height:10px;
@@ -53,8 +52,18 @@
             <label style="margin-left:10px">任务状态</label><label style="margin-left:10px;color:red;" id="taskstatus"></label>
         </div>
 
-        <div style="float:left;margin-bottom:10px;">       
-            <p></p>
+
+
+        <div>
+
+             <div style="float:left;margin-bottom:10px;">       
+           
+                 <div style="margin-top:15px;">
+                     <label>微信登录方式:</label><select id="wechatloginmode" style="margin-left:12px;height:30px;"><option value="1">微信号/QQ登录</option><option value="0">手机登录</option></select>
+                     <label style="margin-left:10px;">微信登录帐号</label><input type="text" style="margin-left:10px;height:30px" name="wechatusername" id="wechatusername" />
+                     <label style="margin-left:10px;">微信登录密码</label><input type="text" style="margin-left:10px;height:30px" name="wechatpwd" id="wechatpwd" />
+                 </div>  
+
             <div>
                 <label>打招呼的内容:</label>
                 <textarea id="content" style="width:650px;height:100px; margin:10px;"></textarea>
@@ -79,11 +88,11 @@
 
         </div>
 
-        <div id="divDevice" style="float:left;margin-left:20px;margin-bottom:10px;margin-top:10px;display:none;">
+         <div id="divDevice" style="float:left;margin-left:10px;margin-bottom:10px;margin-top:10px;display:none;">
             <fieldset style="margin-left:10px;">
                 <legend>设备信息</legend>
                
-                <div style="margin:20px;width:300px;">         
+                <div style="margin:10px;width:300px;">         
                     <table>     
                         <tr>
                             <td>设 备 号<span style="margin-left:12px;margin-right:20px;" id="deviceno" /></td><td>设备名称<span style="margin-left:12px;margin-right:10px;" id="devicename" /></td>
@@ -101,6 +110,8 @@
             </fieldset>
 
         </div>
+
+       </div>
 
     </div>
     
